@@ -83,3 +83,12 @@ aside ul li a {
     height: 100%;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
+
+.aside-box {
+    padding: 20px;
+    width: 200px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
