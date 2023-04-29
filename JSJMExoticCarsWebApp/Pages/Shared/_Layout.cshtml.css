@@ -1,48 +1,85 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-a {
-  color: #0077cc;
+body {
+    background: #3C4B8E;
+    color: white;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.logo {
+    width: 500px;
 }
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
 }
 
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+.nav-link {
+    color: #DDBB71;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    color: #DDBB71;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: #DDBB71;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    color: #DDBB71;
+    background: #DDBB71;
+    width: 100%;
+}
+
+aside ul li a {
+    color: #DDBB71;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+    color: #DDBB71;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+}
+
+.border-top {
+    border-top: 1px solid #DDBB71;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #DDBB71;
+}
+
+.aside-box {
+    padding: 20px;
+    width: 200px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
