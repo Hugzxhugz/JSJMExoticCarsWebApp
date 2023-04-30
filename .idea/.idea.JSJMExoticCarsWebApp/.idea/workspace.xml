@@ -5,14 +5,19 @@
     <projectFile profileName="JSJMExoticCarsWebApp">JSJMExoticCarsWebApp/JSJMExoticCarsWebApp.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b50dc75-ea98-48be-9e50-bfc29fc086e8" name="Changes" comment="" />
+    <list default="true" id="4b50dc75-ea98-48be-9e50-bfc29fc086e8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AddCar.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AddCar.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.JSJMExoticCarsWebApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JSJMExoticCarsWebApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AboutUs.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AboutUs.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/Market.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/Market.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/wwwroot/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/wwwroot/css/style.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/james/RiderProjects/JSJMExoticCarsWebApp/JSJMExoticCarsWebApp/Pages/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -25,16 +30,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.JSJMExoticCarsWebApp">
     <configuration name="JSJMExoticCarsWebApp" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/JSJMExoticCarsWebApp/JSJMExoticCarsWebApp.csproj" />
@@ -76,6 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1682771795838</updated>
       <workItem from="1682771805112" duration="135000" />
+      <workItem from="1682842518202" duration="912000" />
     </task>
     <task id="LOCAL-00001" summary="page layout done.">
       <created>1682771893325</created>
