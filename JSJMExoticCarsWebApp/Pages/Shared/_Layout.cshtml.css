@@ -51,6 +51,20 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+aside {
+    width: 20%;
+    background-color: #3C4B8E;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+aside.hidden {
+    display: none;
+}
+
 aside ul li a {
     color: #DDBB71;
     text-decoration: none;

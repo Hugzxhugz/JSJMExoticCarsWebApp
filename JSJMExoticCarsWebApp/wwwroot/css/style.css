@@ -13,8 +13,6 @@ body {
     padding: 10px 10%;
 }
 
-
-
 nav {
     display: flex;
     align-items: center;
@@ -59,12 +57,42 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+
+
+aside {
+    width: 20%;
+    background-color: #3C4B8E;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+aside.hidden {
+    display: none;
+}
+
 aside ul li a {
     color: #DDBB71;
     text-decoration: none;
     font-size: 18px;
     position: relative;
 }
+
+.containerForAside{
+    position: absolute;
+    left: 0;
+    width: 10%;
+    border: 1px solid #DDBB71;
+    box-shadow: 0 0 5px #DDBB71;
+}
+
+.toggle-aside {
+    position: absolute;
+    z-index: 1;
+}
+
 
 .footer {
     color: #DDBB71;
@@ -83,14 +111,7 @@ aside ul li a {
     border-bottom: 1px solid #DDBB71;
 }
 
-.aside-box {
-    padding: 20px;
-    width: 200px;
-    top: 0;
-    left: 0;
-    height: 100%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
+
 
 .text{
     color: #DDBB71;
@@ -99,3 +120,4 @@ aside ul li a {
 h1{
     color: #DDBB71;
 }
+
