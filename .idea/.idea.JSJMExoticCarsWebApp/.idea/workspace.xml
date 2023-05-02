@@ -6,16 +6,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b50dc75-ea98-48be-9e50-bfc29fc086e8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/wwwroot/css/addCar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JSJMExoticCarsWebApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JSJMExoticCarsWebApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/Shared/_Layout.cshtml.css" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/Shared/_Layout.cshtml.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/wwwroot/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/wwwroot/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Models/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Models/Car.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AddCar.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AddCar.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AddCar.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AddCar.cshtml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -28,16 +35,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "list.type.of.created.stylesheet": "CSS",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.JSJMExoticCarsWebApp">
     <configuration name="JSJMExoticCarsWebApp" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/JSJMExoticCarsWebApp/JSJMExoticCarsWebApp.csproj" />
@@ -82,7 +90,8 @@
       <workItem from="1682842518202" duration="2539000" />
       <workItem from="1682931361742" duration="2087000" />
       <workItem from="1682934587085" duration="405000" />
-      <workItem from="1682946882455" duration="2741000" />
+      <workItem from="1682946882455" duration="3221000" />
+      <workItem from="1683019384722" duration="3158000" />
     </task>
     <task id="LOCAL-00001" summary="page layout done.">
       <created>1682771893325</created>
@@ -112,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682933424295</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added borders and edited visual appearance of Index.cshtml">
+      <created>1682949910248</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682949910248</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +155,7 @@
     <MESSAGE value="Created car model as preparation to save car object to database." />
     <MESSAGE value="a" />
     <MESSAGE value="fixed aside toggle. used javascript to perform the toggle." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed aside toggle. used javascript to perform the toggle." />
+    <MESSAGE value="added borders and edited visual appearance of Index.cshtml" />
+    <option name="LAST_COMMIT_MESSAGE" value="added borders and edited visual appearance of Index.cshtml" />
   </component>
 </project>
