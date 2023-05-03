@@ -8,18 +8,18 @@
 
 <div style="text-align: center";>
     <h1>Add car to sell.</h1>
-        <form method="POST">
-            <label for="carModel">Car Model:</label>
+        <form method="post">
+            <label asp-for="@Model.carModel">Car Model:</label>
             <input type="text" id="carModel" name="carModel"><br>
-            <label for="carBrand">Car Brand:</label>
+            <label asp-for="@Model.carBrand">Car Brand:</label>
             <input type="text" id="carBrand" name="carBrand"><br>
-            <label for="yearModel">Year Model:</label>
+            <label asp-for="@Model.yearModel">Year Model:</label>
             <input type="number" id="yearModel" name="yearModel"><br>
-            <label for="description">Description:</label>
+            <label asp-for="@Model.description">Description:</label>
             <input type="text" id="description" name="description"><br>
-            <label for="mileage">Mileage:</label>
+            <label asp-for="@Model.mileage">Mileage:</label>
             <input type="number" id="mileage" name="mileage"><br>
-            <label for="price">Price:</label>
+            <label asp-for="@Model.price">Price:</label>
             <input type="number" id="price" name="price"><br>
             <input type="submit" value="Sell Car">
         </form>
