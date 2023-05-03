@@ -5,10 +5,12 @@
     <projectFile profileName="JSJMExoticCarsWebApp">JSJMExoticCarsWebApp/JSJMExoticCarsWebApp.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b50dc75-ea98-48be-9e50-bfc29fc086e8" name="Changes" comment="edited for pointers in cars to sell forms.">
+    <list default="true" id="4b50dc75-ea98-48be-9e50-bfc29fc086e8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/global.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JSJMExoticCarsWebApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JSJMExoticCarsWebApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AddCar.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AddCar.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AddCar.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AddCar.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp.sln" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AboutUs.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AboutUs.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/Market.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/Market.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +23,6 @@
         <option value="CSS File" />
       </list>
     </option>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/james/RiderProjects/JSJMExoticCarsWebApp/JSJMExoticCarsWebApp/Pages/AddCar.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -95,7 +94,9 @@
       <workItem from="1683019384722" duration="3158000" />
       <workItem from="1683099285936" duration="64000" />
       <workItem from="1683100652673" duration="449000" />
-      <workItem from="1683103880229" duration="344000" />
+      <workItem from="1683103880229" duration="1621000" />
+      <workItem from="1683111284667" duration="986000" />
+      <workItem from="1683114678946" duration="695000" />
     </task>
     <task id="LOCAL-00001" summary="page layout done.">
       <created>1682771893325</created>
