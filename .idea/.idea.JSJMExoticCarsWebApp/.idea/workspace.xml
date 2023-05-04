@@ -5,7 +5,7 @@
     <projectFile profileName="JSJMExoticCarsWebApp">JSJMExoticCarsWebApp/JSJMExoticCarsWebApp.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b50dc75-ea98-48be-9e50-bfc29fc086e8" name="Changes" comment="">
+    <list default="true" id="4b50dc75-ea98-48be-9e50-bfc29fc086e8" name="Changes" comment="added preliminary layout for show car details. edited buttons.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JSJMExoticCarsWebApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JSJMExoticCarsWebApp/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AddCar.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AddCar.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/ShowCars.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/ShowCars.cshtml" afterDir="false" />
@@ -24,6 +24,9 @@
         <option value="CSS File" />
       </list>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/james/RiderProjects/JSJMExoticCarsWebApp/JSJMExoticCarsWebApp/Pages/AddCar.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -98,7 +101,7 @@
       <workItem from="1683103880229" duration="1621000" />
       <workItem from="1683111284667" duration="986000" />
       <workItem from="1683114678946" duration="1054000" />
-      <workItem from="1683185426888" duration="1042000" />
+      <workItem from="1683185426888" duration="1442000" />
     </task>
     <task id="LOCAL-00001" summary="page layout done.">
       <created>1682771893325</created>
@@ -149,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683115846459</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added preliminary layout for show car details. edited buttons.">
+      <created>1683186881360</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683186881360</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +200,7 @@
     <MESSAGE value="added borders and edited visual appearance of Index.cshtml" />
     <MESSAGE value="edited for pointers in cars to sell forms." />
     <MESSAGE value="edited layouts. added showcars page." />
-    <option name="LAST_COMMIT_MESSAGE" value="edited layouts. added showcars page." />
+    <MESSAGE value="added preliminary layout for show car details. edited buttons." />
+    <option name="LAST_COMMIT_MESSAGE" value="added preliminary layout for show car details. edited buttons." />
   </component>
 </project>
