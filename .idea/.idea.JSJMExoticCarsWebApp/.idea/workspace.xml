@@ -6,11 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b50dc75-ea98-48be-9e50-bfc29fc086e8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/global.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JSJMExoticCarsWebApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JSJMExoticCarsWebApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp.sln" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AboutUs.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AboutUs.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/Market.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/Market.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AddCar.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AddCar.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/ShowCars.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/ShowCars.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/ShowCars.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/ShowCars.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/wwwroot/css/addCar.css" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/wwwroot/css/addCar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/wwwroot/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/wwwroot/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +97,8 @@
       <workItem from="1683100652673" duration="449000" />
       <workItem from="1683103880229" duration="1621000" />
       <workItem from="1683111284667" duration="986000" />
-      <workItem from="1683114678946" duration="695000" />
+      <workItem from="1683114678946" duration="1054000" />
+      <workItem from="1683185426888" duration="1042000" />
     </task>
     <task id="LOCAL-00001" summary="page layout done.">
       <created>1682771893325</created>
@@ -140,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683104217641</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="edited layouts. added showcars page.">
+      <created>1683115846459</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683115846459</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +189,7 @@
     <MESSAGE value="fixed aside toggle. used javascript to perform the toggle." />
     <MESSAGE value="added borders and edited visual appearance of Index.cshtml" />
     <MESSAGE value="edited for pointers in cars to sell forms." />
-    <option name="LAST_COMMIT_MESSAGE" value="edited for pointers in cars to sell forms." />
+    <MESSAGE value="edited layouts. added showcars page." />
+    <option name="LAST_COMMIT_MESSAGE" value="edited layouts. added showcars page." />
   </component>
 </project>

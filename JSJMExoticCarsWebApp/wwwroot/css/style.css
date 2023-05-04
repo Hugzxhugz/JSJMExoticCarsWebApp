@@ -10,7 +10,7 @@ body {
 }
 
 header{
-    height: 150px;
+    height: 100px;
 }
 
 
@@ -150,4 +150,26 @@ h1{
 video {
     border-radius: 20px;
     box-shadow: 0 0 10px #DDBB71;
+}
+
+button{
+    background-color: #3C4B8E;
+    color: #DDBB71;
+    border-color: #DDBB71;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 16px;
+    padding-left: 16px;
+    cursor: pointer ;
+    margin-bottom: 20px;
+    transition: background-color 1s, color 1s;
+}
+
+button:hover{
+    background-color: #DDBB71;
+    color: #3C4B8E;
+    border: none;
 }

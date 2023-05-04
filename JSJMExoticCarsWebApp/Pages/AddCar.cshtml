@@ -4,6 +4,7 @@
     ViewData["Title"] = "Add Car";
 }
 
+<link rel="stylesheet" href="css/style.css" asp-append-version="true" />
 <link rel="stylesheet" href="css/addCar.css" />
 
 <div style="text-align: center";>
@@ -21,7 +22,7 @@
             <input type="number" id="mileage" name="mileage"><br>
             <label asp-for="@Model.price">Price:</label>
             <input type="number" id="price" name="price"><br>
-            <input type="submit" value="Sell Car">
+            <button type="submit">Sell Car</button>
         </form>
 
 </div>
