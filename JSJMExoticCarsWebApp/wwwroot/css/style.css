@@ -99,11 +99,16 @@ aside ul li a {
     z-index: 1;
     background: #3C4B8E;
     color: #DDBB71;
-    padding: 5px;
+    padding: 10px;
     border: 1px solid #DDBB71;
-    border-radius: 10px;
+    border-radius: 5px;
+    top: 50px;
+    left: 35px;
 }
 
+.toggle-aside i.fa-bars {
+    font-size: 2.5em;
+}
 
 .footer {
     color: #DDBB71;
