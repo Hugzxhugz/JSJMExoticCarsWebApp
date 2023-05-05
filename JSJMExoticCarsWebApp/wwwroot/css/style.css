@@ -28,7 +28,8 @@ nav {
 }
 
 .logo {
-    width: 500px;
+    width: 600px;
+    padding-left: 100px;
 }
 
 nav ul li {
