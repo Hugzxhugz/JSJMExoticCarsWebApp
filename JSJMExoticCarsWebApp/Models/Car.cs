@@ -1,16 +1,23 @@
-﻿namespace JSJMExoticCarsWebApp.Models;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
+namespace JSJMExoticCarsWebApp.Models;
+
+[Table("CarTable")]
 public class Car
 {
-    public string carModel { get; set; }
-    public string carBrand { get; set; }
-    public int yearModel { get; set; }
-    public int mileage { get; set; }
-    public string description { get; set; }
-    public decimal price { get; set; }
-
-    public Car()
-    {
-     
-    }
+    [Key]
+    public int Id{ get; set; }
+    
+    [Required]
+    [MaxLength(45)]
+    public string CarModel { get; set; }
+    public string CarBrand { get; set; }
+    public int YearModel { get; set; }
+    public int Mileage { get; set; }
+    [MaxLength(255)]
+    public string Description { get; set; }
+    [Required]
+    public int Price { get; set; }
+    
 }
