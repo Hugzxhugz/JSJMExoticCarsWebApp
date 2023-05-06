@@ -43,11 +43,19 @@ namespace JSJMExoticCarsWebApp.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<string>("FuelType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Mileage")
                         .HasColumnType("int");
 
                     b.Property<int>("Price")
                         .HasColumnType("int");
+
+                    b.Property<string>("TransmissionType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("YearModel")
                         .HasColumnType("int");

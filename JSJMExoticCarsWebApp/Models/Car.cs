@@ -20,4 +20,8 @@ public class Car
     [Required]
     public int Price { get; set; }
     
+    public string TransmissionType { get; set; }
+    
+    public string FuelType { get; set; }
+
 }

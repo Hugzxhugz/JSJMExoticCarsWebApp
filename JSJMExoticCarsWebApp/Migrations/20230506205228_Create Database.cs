@@ -5,7 +5,7 @@
 namespace JSJMExoticCarsWebApp.Migrations
 {
     /// <inheritdoc />
-    public partial class CreateCarDatabase : Migration
+    public partial class CreateDatabase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -21,7 +21,9 @@ namespace JSJMExoticCarsWebApp.Migrations
                     YearModel = table.Column<int>(type: "int", nullable: false),
                     Mileage = table.Column<int>(type: "int", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    Price = table.Column<int>(type: "int", nullable: false)
+                    Price = table.Column<int>(type: "int", nullable: false),
+                    TransmissionType = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FuelType = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

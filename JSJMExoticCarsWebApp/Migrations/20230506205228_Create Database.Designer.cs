@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JSJMExoticCarsWebApp.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20230506084934_Create Car Database")]
-    partial class CreateCarDatabase
+    [Migration("20230506205228_Create Database")]
+    partial class CreateDatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -46,11 +46,19 @@ namespace JSJMExoticCarsWebApp.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<string>("FuelType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Mileage")
                         .HasColumnType("int");
 
                     b.Property<int>("Price")
                         .HasColumnType("int");
+
+                    b.Property<string>("TransmissionType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("YearModel")
                         .HasColumnType("int");

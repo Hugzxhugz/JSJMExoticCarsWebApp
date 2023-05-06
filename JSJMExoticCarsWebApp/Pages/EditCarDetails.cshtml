@@ -23,6 +23,19 @@
             <input asp-for="@Model.car.Mileage" type="number" id="Mileage" name="Mileage"><br>
             <label>Price:</label>
             <input asp-for="@Model.car.Price" type="number" id="Price" name="Price"><br>
+            <label>Transmission Type:</label>
+            <select asp-for="@Model.car.TransmissionType" id="TransmissionType" name="TransmissionType">
+                <option value="Manual">Manual</option>
+                <option value="Automatic">Automatic</option>
+            </select><br>
+            <label>Fuel:</label>
+            <select asp-for="@Model.car.FuelType" id="FuelType" name="FuelType">
+                <option value="Gas">Gas</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Hybrid">Hybrid</option>
+                <option value="Electric">Electric</option>
+            </select><br>
+            
             <button type="submit" name="submitAction" value="update">Update Car</button>
             <button type="submit" name="submitAction" value="delete">Delete Car</button>
         </form>
