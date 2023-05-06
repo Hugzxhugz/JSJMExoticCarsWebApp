@@ -10,18 +10,18 @@
 <div style="text-align: center";>
     <h1>Add car to sell.</h1>
         <form method="post">
-            <label asp-for="@Model.CarModel">Car Model:</label>
-            <input type="text" id="carModel" name="CarModel"><br>
-            <label asp-for="@Model.CarBrand">Car Brand:</label>
-            <input type="text" id="carBrand" name="CarBrand"><br>
-            <label asp-for="@Model.YearModel">Year Model:</label>
-            <input type="number" id="yearModel" name="YearModel"><br>
-            <label asp-for="@Model.Description">Description:</label>
-            <input type="text" id="description" name="Description"><br>
-            <label asp-for="@Model.Mileage">Mileage:</label>
-            <input type="number" id="mileage" name="Mileage"><br>
-            <label asp-for="@Model.Price">Price:</label>
-            <input type="number" id="price" name="Price"><br>
+            <label>Car Model:</label>
+            <input asp-for="@Model.CarModel" type="text" id="CarModel" name="CarModel"><br>
+            <label>Car Brand:</label>
+            <input asp-for="@Model.CarBrand" type="text" id="CarBrand" name="CarBrand"><br>
+            <label>Year Model:</label>
+            <input asp-for="@Model.YearModel" type="number" id="YearModel" name="YearModel"><br>
+            <label>Description:</label>
+            <input asp-for ="@Model.Description" type="text" id="Description" name="Description"><br>
+            <label>Mileage:</label>
+            <input asp-for="@Model.Mileage" type="number" id="Mileage" name="Mileage"><br>
+            <label>Price:</label>
+            <input asp-for="@Model.Price" type="number" id="Price" name="Price"><br>
             <button type="submit">Sell Car</button>
         </form>
 

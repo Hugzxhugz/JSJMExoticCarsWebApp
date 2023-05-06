@@ -1,12 +1,23 @@
 ﻿@page
-@model PrivacyModel
+@model MarketModel
 @{
     ViewData["Title"] = "Market Place";
 }
 
-<div style="text-align: center";>
-    <h1>@ViewData["Title"]</h1>
-    <p>Use this page to display cars.</p>
+<<div class="car-info">
+    @foreach (Models.Car car in Model.cars)
+    {
+        <div class="box" onclick="location.href='@Url.Page("/ShowCarDetails", new { id = car.Id })'">
+            <h3>@car.CarModel</h3>
+            <p>@car.CarBrand</p>
+            <p>$@car.Price</p>
+        </div>
+    }
+</div>
+
+<br />
+
+<div class="box" style="text-align: center">
     <button onclick="location.href='@Url.Page("/AddCar")'" class="btn btn-primary">Add Car</button>
     <button onclick="location.href='@Url.Page("/ShowCars")'" class="btn btn-primary">Show Car</button>
 </div>
