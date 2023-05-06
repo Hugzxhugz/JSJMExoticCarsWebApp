@@ -5,7 +5,9 @@
     <projectFile profileName="JSJMExoticCarsWebApp">JSJMExoticCarsWebApp/JSJMExoticCarsWebApp.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b50dc75-ea98-48be-9e50-bfc29fc086e8" name="Changes" comment="Update and Delete is now functioning. all that is left is the car controller for the api." />
+    <list default="true" id="4b50dc75-ea98-48be-9e50-bfc29fc086e8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.JSJMExoticCarsWebApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JSJMExoticCarsWebApp/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +100,7 @@
       <workItem from="1683185426888" duration="1442000" />
       <workItem from="1683274408427" duration="2087000" />
       <workItem from="1683363216846" duration="599000" />
-      <workItem from="1683369307292" duration="4379000" />
+      <workItem from="1683369307292" duration="5387000" />
     </task>
     <task id="LOCAL-00001" summary="page layout done.">
       <created>1682771893325</created>
