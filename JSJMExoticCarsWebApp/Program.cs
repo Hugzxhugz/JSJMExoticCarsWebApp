@@ -1,3 +1,6 @@
+using JSJMExoticCarsWebApp.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace JSJMExoticCarsWebApp
 {
     public class Program
@@ -11,6 +14,11 @@ namespace JSJMExoticCarsWebApp
 
             var app = builder.Build();
 
+            builder.Services.AddDbContext<CarDbContext>(options =>
+             options.UseSqlServer(
+                 builder.Configuration.GetConnectionString("CarDatabaseConnectionString")
+                 ));
+
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
@@ -19,6 +27,7 @@ namespace JSJMExoticCarsWebApp
                 app.UseHsts();
             }
 
+          
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

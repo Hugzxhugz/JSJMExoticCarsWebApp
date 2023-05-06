@@ -1,16 +1,43 @@
-﻿namespace JSJMExoticCarsWebApp.Models;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using JSJMExoticCarsWebApp.Models.Enums;
 
+namespace JSJMExoticCarsWebApp.Models;
+
+[Table("CarTable")]
 public class Car
 {
-    public string carModel { get; set; }
-    public string carBrand { get; set; }
-    public int yearModel { get; set; }
-    public int mileage { get; set; }
-    public string description { get; set; }
-    public decimal price { get; set; }
+    [Key]
+    [Column("car_id")]
+    public int Id { get; set; }
 
-    public Car()
-    {
-     
-    }
+    [Required]
+    [Column("car_model")]
+    public string Model { get; set; }
+
+    [Required]
+    [Column("car_brand")]
+    public string Brand { get; set; }
+
+    [Required]
+    [Column("car_model_year")]
+    public int ModelYear { get; set; }
+
+    [Required]
+    [Column("car_milage")]
+    public int Mileage { get; set; }
+
+    [Column("car_description")]
+    public string Description { get; set; }
+
+    [Column("car_image_url")]
+    public string ImageUrl { get; set; }
+    
+    [Required]
+    [Column("car_transmission")]
+    public TransmissionType Transmission { get; set;}
+
+    [Required]
+    [Column("car_fueltype")]
+    public FuelType Fuel { get; set; }
 }
