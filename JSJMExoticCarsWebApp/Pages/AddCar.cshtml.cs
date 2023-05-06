@@ -15,19 +15,25 @@ public class addCarModel : PageModel
     {
         this.dbc = dbc;
     }
+
     [BindProperty]
     public Car car { get; set; }
+
     public void OnGet()
     {
     }
 
-    public void OnPost()
+    public IActionResult OnPost()
     {
-        if(ModelState.IsValid)
+        if (ModelState.IsValid)
         {
             dbc.Cars.Add(car);
             dbc.SaveChanges();
+
+            return RedirectToPage("/Market");
         }
+        
+        return Page();
     }
 }
 

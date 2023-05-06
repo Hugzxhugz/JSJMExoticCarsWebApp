@@ -1,14 +1,15 @@
 ﻿@page
-@model addCarModel
+@model EditCarDetailsModel
+
 @{
-    ViewData["Title"] = "Add Car";
+    ViewData["Title"] = "Edit Car Details";
 }
 
 <link rel="stylesheet" href="css/style.css" asp-append-version="true" />
-<link rel="stylesheet" href="css/addCar.css" />
+<link rel="stylesheet" href="css/addCar.css"/>
 
 <div style="text-align: center";>
-    <h1>Add car to sell.</h1>
+    <h1>Edit Car Details</h1>
         <form method="post">
             <label>Car Model:</label>
             <input asp-for="@Model.car.CarModel" type="text" id="CarModel" name="CarModel"><br>
@@ -22,7 +23,8 @@
             <input asp-for="@Model.car.Mileage" type="number" id="Mileage" name="Mileage"><br>
             <label>Price:</label>
             <input asp-for="@Model.car.Price" type="number" id="Price" name="Price"><br>
-            <button type="submit">Sell Car</button>
+            <button type="submit" name="submitAction" value="update">Update Car</button>
+            <button type="submit" name="submitAction" value="delete">Delete Car</button>
         </form>
 
 </div>
