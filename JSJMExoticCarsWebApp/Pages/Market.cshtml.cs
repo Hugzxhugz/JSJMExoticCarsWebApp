@@ -1,19 +1,23 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using JSJMExoticCarsWebApp.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace JSJMExoticCarsWebApp.Pages
 {
-    public class PrivacyModel : PageModel
+    public class MarketModel : PageModel
     {
-        private readonly ILogger<PrivacyModel> _logger;
 
-        public PrivacyModel(ILogger<PrivacyModel> logger)
+        CarDbContext CarDbContext { get; set; }
+        public MarketModel(CarDbContext cardb)
         {
-            _logger = logger;
+            CarDbContext= cardb;
         }
+
+        public List<Car> Cars { get; set; }
 
         public void OnGet()
         {
+            Cars = CarDbContext.Cars.ToList();
         }
     }
 }

@@ -21,17 +21,7 @@ label {
     font-weight: bold;
 }
 
-input[type="text"],
-input[type="number"] {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #DDBB71;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-input[type="submit"] {
+button{
     background-color: #3C4B8E;
     color: #DDBB71;
     border-color: #DDBB71;
@@ -47,9 +37,31 @@ input[type="submit"] {
     transition: background-color 1s, color 1s;
 }
 
-input[type="submit"]:hover {
+button:hover {
     background-color: #DDBB71;
     color: #3C4B8E;
     border: none;
 }
 
+.CarDetails {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #DDBB71;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.selectEnums {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #DDBB71;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#Description {
+    resize: none;
+    height: auto;
+}

@@ -2,9 +2,9 @@
 
 namespace JSJMExoticCarsWebApp.Models
 {
-    public class DatabaseContext : DbContext
+    public class CarDbContext : DbContext
     {
-        public DatabaseContext(DbContextOptions options) : base(options) 
+        public CarDbContext(DbContextOptions options) : base(options) 
         { 
             
         }

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace JSJMExoticCarsWebApp.Migrations
 {
-    [DbContext(typeof(DatabaseContext))]
+    [DbContext(typeof(CarDbContext))]
     [Migration("20230506140534_InitialCreate")]
     partial class InitialCreate
     {

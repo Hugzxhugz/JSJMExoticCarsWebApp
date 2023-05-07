@@ -1,5 +1,6 @@
 ﻿@page
-@model JSJMExoticCarsWebApp.Models.Car
+@using JSJMExoticCarsWebApp.Models.Enums;
+@model JSJMExoticCarsWebApp.Pages.addCar
 @{
     ViewData["Title"] = "Add Car";
 }
@@ -7,20 +8,53 @@
 <link rel="stylesheet" href="css/style.css" asp-append-version="true" />
 <link rel="stylesheet" href="css/addCar.css" />
 
+
+
 <div style="text-align: center";>
-    <h1>Add car to sell.</h1>
+    <h1>Add a car to sell</h1>
         <form method="post">
-            <label asp-for="@Model.Model">Car Model:</label>
-            <input type="text" id="Model" name="carModel"><br>
-            <label asp-for="@Model.Brand">Car Brand:</label>
-            <input type="text" id="Brand" name="carBrand"><br>
-        <label asp-for="@Model.ModelYear">Year Model:</label>
-        <input type="number" id="ModelYear" name="yearModel"><br>
-            <label asp-for="@Model.Description">Description:</label>
-            <input type="text" id="Description" name="description"><br>
-            <label asp-for="@Model.Mileage">Mileage:</label>
-            <input type="number" id="Mileage" name="mileage"><br>
-            <button type="submit">Sell Car</button>
+        <label asp-for="@Model.Car.Brand">Brand:</label>
+        <input class="CarDetails" type="text" asp-for="@Model.Car.Brand"><br>
+        <p><span asp-validation-for="@Model.Car.Brand"></span></p>
+
+        <label asp-for="@Model.Car.Model">Model:</label>
+        <input class="CarDetails" type="text" asp-for="@Model.Car.Model"><br>
+        <p><span asp-validation-for="@Model.Car.Model"></span></p>
+
+        <label asp-for="@Model.Car.ModelYear">Model Year:</label>
+        <input class="CarDetails" type="number" asp-for="@Model.Car.ModelYear"><br>
+        <p><span asp-validation-for="@Model.Car.ModelYear"></span></p>
+
+        <label asp-for="@Model.Car.Description">Description:</label>
+        <textarea class="CarDetails" type="text" id="Description" asp-for="@Model.Car.Description"></textarea><br>
+        <p><span asp-validation-for="@Model.Car.Description"></span></p>
+
+        <label asp-for="@Model.Car.Mileage">Mileage:</label>
+        <input class="CarDetails" type="number" asp-for="@Model.Car.Mileage"><br>
+        <p><span asp-validation-for="@Model.Car.Mileage"></span></p>
+
+        <label asp-for="@Model.Car.Transmission">Transmission</label>
+        <select class="selectEnums" asp-for="@Model.Car.Transmission">
+        @foreach (var value in Enum.GetValues(typeof(TransmissionType)))
+        {
+            <option value="@((int)value)">@value</option>
+        }
+        </select><br>
+
+        <label asp-for="@Model.Car.Fuel">FuelType</label>
+        <select class="selectEnums" asp-for="@Model.Car.Fuel">
+            @foreach (var value in Enum.GetValues(typeof(FuelType)))
+            {
+                <option value="@((int)value)">@value</option>
+            }
+        </select><br>
+
+        <label asp-for="@Model.Car.Price">Price:</label>
+        <input class="CarDetails" type="number" asp-for="@Model.Car.Price"><br>
+        <p><span asp-validation-for="@Model.Car.Price"></span></p>
+
+
+        <button type="submit">Sell Car</button>
         </form>
 
 </div>
