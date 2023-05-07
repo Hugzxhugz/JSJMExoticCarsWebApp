@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.VisualBasic.FileIO;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace JSJMExoticCarsWebApp.Models;
@@ -17,11 +18,9 @@ public class Car
     public int Mileage { get; set; }
     [MaxLength(255)]
     public string Description { get; set; }
-    [Required]
+    public TransmissionType Transmission { get; set; }
+    public FuelType Fuel { get; set; }
     public int Price { get; set; }
     
-    public string TransmissionType { get; set; }
-    
-    public string FuelType { get; set; }
 
 }
