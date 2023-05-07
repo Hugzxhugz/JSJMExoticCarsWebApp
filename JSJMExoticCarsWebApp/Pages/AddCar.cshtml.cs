@@ -1,7 +1,10 @@
-﻿using System.Text.Json;
+﻿using System.Net.NetworkInformation;
+using System.Text.Json;
 using JSJMExoticCarsWebApp.Models;
+using JSJMExoticCarsWebApp.Models.Enums;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+
 
 
 

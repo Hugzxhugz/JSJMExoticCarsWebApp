@@ -7,10 +7,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4b50dc75-ea98-48be-9e50-bfc29fc086e8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JSJMExoticCarsWebApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JSJMExoticCarsWebApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Models/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Models/Car.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AddCar.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AddCar.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/EditCarDetails.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/EditCarDetails.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/ShowCarDetails.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/ShowCarDetails.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +21,9 @@
         <option value="CSS File" />
       </list>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/james/RiderProjects/JSJMExoticCarsWebApp/JSJMExoticCarsWebApp/Pages/AddCar.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

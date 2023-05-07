@@ -1,4 +1,5 @@
 ﻿@page
+@using JSJMExoticCarsWebApp.Models.Enums
 @model addCarModel
 @{
     ViewData["Title"] = "Add Car";
@@ -20,21 +21,23 @@
             <input asp-for ="@Model.car.Description" type="text" id="Description" name="Description"><br>
             <label>Mileage:</label>
             <input asp-for="@Model.car.Mileage" type="number" id="Mileage" name="Mileage"><br>
+            <label asp-for="@Model.car.Transmission">Transmission Type:</label>
+            <select class="selectEnums" asp-for="@Model.car.Transmission">
+            @foreach (var value in Enum.GetValues(typeof(TransmissionType)))
+            {
+                <option value="@((int)value)">@value</option>
+            }
+            </select><br>
+            
+            <label asp-for="@Model.car.Fuel">Fuel Type:</label>
+            <select class="selectEnums" asp-for="@Model.car.Fuel">
+                @foreach (var value in Enum.GetValues(typeof(FuelType)))
+                {
+                    <option value="@((int)value)">@value</option>
+                }
+            </select><br>
             <label>Price:</label>
             <input asp-for="@Model.car.Price" type="number" id="Price" name="Price"><br>
-            <label>Transmission Type:</label>
-            <select asp-for="@Model.car.Transmission" id="TransmissionType" name="TransmissionType">
-                <option value="Manual">Manual</option>
-                <option value="Automatic">Automatic</option>
-            </select><br>
-            <label>Fuel:</label>
-            <select asp-for="@Model.car.Fuel" id="FuelType" name="FuelType">
-                <option value="Gas">Gas</option>
-                <option value="Diesel">Diesel</option>
-                <option value="Hybrid">Hybrid</option>
-                <option value="Electric">Electric</option>
-            </select><br>
-
             
             <button type="submit">Sell Car</button>
         </form>
