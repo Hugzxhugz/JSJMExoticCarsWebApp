@@ -10,4 +10,11 @@ public class CarDbContext : DbContext
 
     public DbSet<Car> Cars{ get; set; }
     
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Car>()
+            .Property(c => c.Id)
+            .ValueGeneratedOnAdd();
+    }
+    
 }

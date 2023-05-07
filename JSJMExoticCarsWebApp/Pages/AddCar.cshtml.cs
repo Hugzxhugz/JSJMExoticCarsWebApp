@@ -13,17 +13,20 @@ namespace JSJMExoticCarsWebApp.Pages;
 public class addCarModel : PageModel
 {
     CarDbContext dbc;
+    
+    [BindProperty]
+    public Car car { get; set; }
 
     public addCarModel(CarDbContext dbc)
     {
         this.dbc = dbc;
     }
 
-    [BindProperty]
-    public Car car { get; set; }
+    
 
     public void OnGet()
     {
+        car = new Car();
     }
 
     public IActionResult OnPost()
@@ -31,12 +34,21 @@ public class addCarModel : PageModel
         if (ModelState.IsValid)
         {
             dbc.Cars.Add(car);
-            dbc.SaveChanges();
+            int result = dbc.SaveChanges();
 
-            return RedirectToPage("/Market");
+            if (result > 0)
+            {
+                TempData["Message"] = "Car added successfully!";
+                return RedirectToPage("/Market");
+            }
+            else
+            {
+                TempData["Message"] = "Error adding car.";
+            }
         }
-        
+
         return Page();
     }
+
 }
 
