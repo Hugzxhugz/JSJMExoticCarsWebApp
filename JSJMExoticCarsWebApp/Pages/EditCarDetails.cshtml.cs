@@ -7,9 +7,9 @@ namespace JSJMExoticCarsWebApp.Pages;
 
 public class EditCarDetailsModel : PageModel
 {
-    private DatabaseContext dbc;
+    private CarDbContext dbc;
 
-    public EditCarDetailsModel(DatabaseContext dbc)
+    public EditCarDetailsModel(CarDbContext dbc)
     {
         this.dbc = dbc;
     }

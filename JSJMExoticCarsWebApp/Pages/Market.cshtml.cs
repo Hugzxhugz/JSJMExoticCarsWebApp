@@ -6,9 +6,9 @@ namespace JSJMExoticCarsWebApp.Pages
 {
     public class MarketModel : PageModel
     {
-        DatabaseContext dbc;
+        CarDbContext dbc;
 
-        public MarketModel(DatabaseContext dbc)
+        public MarketModel(CarDbContext dbc)
         {
             this.dbc = dbc;
         }

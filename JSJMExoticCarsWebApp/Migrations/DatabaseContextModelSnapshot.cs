@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace JSJMExoticCarsWebApp.Migrations
 {
-    [DbContext(typeof(DatabaseContext))]
+    [DbContext(typeof(CarDbContext))]
     partial class DatabaseContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

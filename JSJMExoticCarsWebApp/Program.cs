@@ -12,7 +12,7 @@ namespace JSJMExoticCarsWebApp
             // Add services to the container.
             builder.Services.AddRazorPages();
             builder.Services.AddControllers();
-            builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(
+            builder.Services.AddDbContext<CarDbContext>(options => options.UseSqlServer(
                 builder.Configuration.GetConnectionString("myConnectionString")
                 ));
 

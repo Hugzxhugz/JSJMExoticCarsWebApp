@@ -8,9 +8,9 @@ namespace JSJMExoticCarsWebApp.Controllers
     [ApiController]
     public class CarController : ControllerBase
     {
-        DatabaseContext dbc;
+        CarDbContext dbc;
 
-        public CarController(DatabaseContext dbc)
+        public CarController(CarDbContext dbc)
         {
             this.dbc = dbc;
         }

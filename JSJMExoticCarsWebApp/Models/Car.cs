@@ -1,6 +1,8 @@
-﻿using Microsoft.VisualBasic.FileIO;
+﻿using JSJMExoticCarsWebApp.Models.Enums;
+using Microsoft.VisualBasic.FileIO;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+
 
 namespace JSJMExoticCarsWebApp.Models;
 
