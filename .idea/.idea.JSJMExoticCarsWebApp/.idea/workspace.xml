@@ -5,10 +5,11 @@
     <projectFile profileName="JSJMExoticCarsWebApp">JSJMExoticCarsWebApp/JSJMExoticCarsWebApp.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b50dc75-ea98-48be-9e50-bfc29fc086e8" name="Changes" comment="added preliminary layout for show car details. edited buttons.">
+    <list default="true" id="4b50dc75-ea98-48be-9e50-bfc29fc086e8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JSJMExoticCarsWebApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JSJMExoticCarsWebApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/Market.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/Market.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/wwwroot/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/wwwroot/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Models/CarDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Models/CarDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AddCar.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/AddCar.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/EditCarDetails.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JSJMExoticCarsWebApp/Pages/EditCarDetails.cshtml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +22,6 @@
         <option value="CSS File" />
       </list>
     </option>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/james/RiderProjects/JSJMExoticCarsWebApp/JSJMExoticCarsWebApp/Pages/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -100,6 +98,11 @@
       <workItem from="1683114678946" duration="1054000" />
       <workItem from="1683185426888" duration="1442000" />
       <workItem from="1683274408427" duration="2087000" />
+      <workItem from="1683363216846" duration="599000" />
+      <workItem from="1683369307292" duration="5387000" />
+      <workItem from="1683405869450" duration="247000" />
+      <workItem from="1683406202380" duration="67000" />
+      <workItem from="1683489042165" duration="54000" />
     </task>
     <task id="LOCAL-00001" summary="page layout done.">
       <created>1682771893325</created>
@@ -157,7 +160,28 @@
       <option name="project" value="LOCAL" />
       <updated>1683186881360</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="adjusted paddings">
+      <created>1683277923990</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683277923990</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Successfully retrieved data from database. fixed navigation aswell to car details when an item is clicked in market.">
+      <created>1683370081873</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683370081873</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Update and Delete is now functioning. all that is left is the car controller for the api.">
+      <created>1683373726273</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1683373726273</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +223,9 @@
     <MESSAGE value="edited for pointers in cars to sell forms." />
     <MESSAGE value="edited layouts. added showcars page." />
     <MESSAGE value="added preliminary layout for show car details. edited buttons." />
-    <option name="LAST_COMMIT_MESSAGE" value="added preliminary layout for show car details. edited buttons." />
+    <MESSAGE value="adjusted paddings" />
+    <MESSAGE value="Successfully retrieved data from database. fixed navigation aswell to car details when an item is clicked in market." />
+    <MESSAGE value="Update and Delete is now functioning. all that is left is the car controller for the api." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update and Delete is now functioning. all that is left is the car controller for the api." />
   </component>
 </project>

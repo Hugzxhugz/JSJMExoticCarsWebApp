@@ -1,16 +1,17 @@
 ﻿@page
 @using JSJMExoticCarsWebApp.Models.Enums
-@model addCarModel
+@model EditCarDetailsModel
+
 @{
-    ViewData["Title"] = "Add Car";
+    ViewData["Title"] = "Edit Car Details";
 }
 
 <link rel="stylesheet" href="css/style.css" asp-append-version="true" />
-<link rel="stylesheet" href="css/carInfo.css" />
+<link rel="stylesheet" href="css/carInfo.css"/>
 
-<div style="text-align: center";>
-    <h1>Add car to sell.</h1>
-    <form method="post">       
+<div style="text-align: center">
+    <h1>Edit Car Details</h1>
+        <form method="post">
         <label asp-for="@Model.car.CarModel">Model:</label>
         <input class="CarDetails" type="text" asp-for="@Model.car.CarModel"><br>
         <p><span asp-validation-for="@Model.car.CarModel"></span></p>
@@ -50,8 +51,9 @@
         <label asp-for="@Model.car.Price">Price:</label>
         <input class="CarDetails" type="number" asp-for="@Model.car.Price"><br>
         <p><span asp-validation-for="@Model.car.Price"></span></p>
-            
-            <button type="submit">Sell Car</button>
+
+        <button type="submit" name="submitAction" value="update">Update Car</button>
+            <button type="submit" name="submitAction" value="delete">Delete Car</button>
         </form>
 
 </div>

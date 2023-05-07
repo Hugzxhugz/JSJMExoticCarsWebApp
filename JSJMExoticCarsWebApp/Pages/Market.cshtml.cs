@@ -6,18 +6,16 @@ namespace JSJMExoticCarsWebApp.Pages
 {
     public class MarketModel : PageModel
     {
+        CarDbContext dbc;
 
-        CarDbContext CarDbContext { get; set; }
-        public MarketModel(CarDbContext cardb)
+        public MarketModel(CarDbContext dbc)
         {
-            CarDbContext= cardb;
+            this.dbc = dbc;
         }
-
-        public List<Car> Cars { get; set; }
-
+        public List<Car> cars { get; set; }
         public void OnGet()
         {
-            Cars = CarDbContext.Cars.ToList();
+            cars = dbc.Cars.ToList();
         }
     }
 }

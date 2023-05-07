@@ -1,38 +1,54 @@
-﻿using System.Text.Json;
+﻿using System.Net.NetworkInformation;
+using System.Text.Json;
 using JSJMExoticCarsWebApp.Models;
+using JSJMExoticCarsWebApp.Models.Enums;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 
 
+
 namespace JSJMExoticCarsWebApp.Pages;
 
-public class addCar : PageModel
+public class addCarModel : PageModel
 {
-    CarDbContext carDbContext;
-
+    CarDbContext dbc;
+    
     [BindProperty]
-    public Car Car { get; set; }
+    public Car car { get; set; }
 
-    public addCar(CarDbContext carDbContext)
+    public addCarModel(CarDbContext dbc)
     {
-        this.carDbContext = carDbContext;
+        this.dbc = dbc;
     }
+
+    
+
     public void OnGet()
     {
-        
+        car = new Car();
     }
 
-    public ActionResult OnPost()
+    public IActionResult OnPost()
     {
         if (ModelState.IsValid)
         {
-            Car.Listed = true;
-            carDbContext.Cars.Add(Car);
-            carDbContext.SaveChanges();
-            return RedirectToPage("/Market");
+            dbc.Cars.Add(car);
+            int result = dbc.SaveChanges();
+
+            if (result > 0)
+            {
+                TempData["Message"] = "Car added successfully!";
+                return RedirectToPage("/Market");
+            }
+            else
+            {
+                TempData["Message"] = "Error adding car.";
+            }
         }
+
         return Page();
     }
+
 }
 
