@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JSJMExoticCarsWebApp.Migrations
 {
     [DbContext(typeof(CarDbContext))]
-    [Migration("20230508085020_create car database")]
-    partial class createcardatabase
+    [Migration("20230508105310_create database")]
+    partial class createdatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

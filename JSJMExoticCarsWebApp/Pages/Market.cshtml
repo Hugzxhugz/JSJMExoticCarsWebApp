@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="css/style.css" asp-append-version="true" />
 <link rel="stylesheet" href="css/carInfo.css" />
 
-<<div class="car-info">
+<div class="car-info">
     @foreach (Models.Car car in Model.cars)
     {
         <div class="box" onclick="location.href='@Url.Page("/ShowCarDetails", new { id = car.Id })'">
