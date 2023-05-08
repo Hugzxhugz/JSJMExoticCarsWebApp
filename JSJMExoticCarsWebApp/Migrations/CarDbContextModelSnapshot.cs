@@ -31,32 +31,40 @@ namespace JSJMExoticCarsWebApp.Migrations
 
                     b.Property<string>("CarBrand")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("car_brand");
 
                     b.Property<string>("CarModel")
                         .IsRequired()
                         .HasMaxLength(45)
-                        .HasColumnType("nvarchar(45)");
+                        .HasColumnType("nvarchar(45)")
+                        .HasColumnName("car_model");
 
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("car_description");
 
                     b.Property<int>("Fuel")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("car_fuel_type");
 
                     b.Property<int>("Mileage")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("car_mileage");
 
                     b.Property<int>("Price")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("car_price");
 
                     b.Property<int>("Transmission")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("car_transmission_type");
 
                     b.Property<int>("YearModel")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("car_year_model");
 
                     b.HasKey("Id");
 

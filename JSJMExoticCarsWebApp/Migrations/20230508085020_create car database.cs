@@ -16,14 +16,14 @@ namespace JSJMExoticCarsWebApp.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CarModel = table.Column<string>(type: "nvarchar(45)", maxLength: 45, nullable: false),
-                    CarBrand = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    YearModel = table.Column<int>(type: "int", nullable: false),
-                    Mileage = table.Column<int>(type: "int", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    Transmission = table.Column<int>(type: "int", nullable: false),
-                    Fuel = table.Column<int>(type: "int", nullable: false),
-                    Price = table.Column<int>(type: "int", nullable: false)
+                    car_model = table.Column<string>(type: "nvarchar(45)", maxLength: 45, nullable: false),
+                    car_brand = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    car_year_model = table.Column<int>(type: "int", nullable: false),
+                    car_mileage = table.Column<int>(type: "int", nullable: false),
+                    car_description = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    car_transmission_type = table.Column<int>(type: "int", nullable: false),
+                    car_fuel_type = table.Column<int>(type: "int", nullable: false),
+                    car_price = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
