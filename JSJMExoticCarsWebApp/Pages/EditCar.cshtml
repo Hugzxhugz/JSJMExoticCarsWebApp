@@ -1,0 +1,57 @@
+﻿@page 
+@model JSJMExoticCarsWebApp.Pages.EditCarModel
+@{
+    ViewData["Title"] = "Edit Car Details";
+}
+
+<link rel="stylesheet" href="css/style.css" asp-append-version="true" />
+<link rel="stylesheet" href="css/carInfo.css" />
+
+<div style="text-align: center">
+    <h1>Edit Car Details</h1>
+    <form method="post">
+        <label asp-for="@Model.car.CarModel">Model:</label>
+        <input class="CarDetails" type="text" asp-for="@Model.car.CarModel"><br>
+        <p><span asp-validation-for="@Model.car.CarModel"></span></p>
+
+        <label asp-for="@Model.car.CarBrand">Brand:</label>
+        <input class="CarDetails" type="text" asp-for="@Model.car.CarBrand"><br>
+        <p><span asp-validation-for="@Model.car.CarBrand"></span></p>
+
+        <label asp-for="@Model.car.YearModel">YearModel:</label>
+        <input class="CarDetails" type="number" asp-for="@Model.car.YearModel"><br>
+        <p><span asp-validation-for="@Model.car.YearModel"></span></p>
+
+        <label asp-for="@Model.car.Description">Description:</label>
+        <textarea class="CarDetails" type="text" id="Description" asp-for="@Model.car.Description"></textarea><br>
+        <p><span asp-validation-for="@Model.car.Description"></span></p>
+
+        <label asp-for="@Model.car.Mileage">Mileage:</label>
+        <input class="CarDetails" type="number" asp-for="@Model.car.Mileage"><br>
+        <p><span asp-validation-for="@Model.car.Mileage"></span></p>
+
+        <label asp-for="@Model.car.Transmission">Transmission</label>
+        <select class="selectEnums" asp-for="@Model.car.Transmission">
+            @foreach (var value in Enum.GetValues(typeof(TransmissionType)))
+            {
+                <option value="@((int)value)">@value</option>
+            }
+        </select><br>
+
+        <label asp-for="@Model.car.Fuel">FuelType</label>
+        <select class="selectEnums" asp-for="@Model.car.Fuel">
+            @foreach (var value in Enum.GetValues(typeof(FuelType)))
+            {
+                <option value="@((int)value)">@value</option>
+            }
+        </select><br>
+
+        <label asp-for="@Model.car.Price">Price:</label>
+        <input class="CarDetails" type="number" asp-for="@Model.car.Price"><br>
+        <p><span asp-validation-for="@Model.car.Price"></span></p>
+
+        <button type="submit" name="submitAction" value="update">Update Car</button>
+        <button type="submit" name="submitAction" value="delete">Delete Car</button>
+    </form>
+
+</div>
