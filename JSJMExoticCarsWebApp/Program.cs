@@ -13,17 +13,10 @@ namespace JSJMExoticCarsWebApp
             builder.Services.AddRazorPages();
             builder.Services.AddControllers();
             builder.Services.AddDbContext<CarDbContext>(options => options.UseSqlServer(
-                builder.Configuration.GetConnectionString("myConnectionString")
-                ));
+                builder.Configuration.GetConnectionString("CarDbContext")
+                ));          
 
-            builder.Services.AddDbContext<CarDbContext>(options =>
-           options.UseSqlServer(
-               builder.Configuration.GetConnectionString("CarConnectionString")
-               ));
-
-            var app = builder.Build();
-
-          
+            var app = builder.Build();          
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
@@ -41,8 +34,11 @@ namespace JSJMExoticCarsWebApp
 
             app.UseAuthorization();
 
-            app.MapRazorPages();
-            app.MapControllers();
+            app.UseEndpoints(endpoints =>
+            {
+                app.MapRazorPages();
+                app.MapControllers();
+            });            
 
             app.Run();
         }
