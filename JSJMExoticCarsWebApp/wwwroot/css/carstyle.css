@@ -1,4 +1,13 @@
-﻿h1 {
+﻿.carobject {
+    text-align: left;
+    margin: auto;
+    border-radius: 5px;
+    border: 1px solid #DDBB71;
+    width: 600px;
+    padding 15px;
+}
+
+h1 {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 30px;
@@ -21,7 +30,7 @@ label {
     font-weight: bold;
 }
 
-button{
+button {
     background-color: #3C4B8E;
     color: #DDBB71;
     border-color: #DDBB71;
@@ -32,16 +41,16 @@ button{
     padding-bottom: 10px;
     padding-right: 16px;
     padding-left: 16px;
-    cursor: pointer ;
+    cursor: pointer;
     margin-bottom: 20px;
     transition: background-color 1s, color 1s;
 }
 
-button:hover {
-    background-color: #DDBB71;
-    color: #3C4B8E;
-    border: none;
-}
+    button:hover {
+        background-color: #DDBB71;
+        color: #3C4B8E;
+        border: none;
+    }
 
 .CarDetails {
     padding: 10px;

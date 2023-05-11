@@ -2,15 +2,16 @@
 @using JSJMExoticCarsWebApp.Models.Enums;
 @model JSJMExoticCarsWebApp.Pages.EditCarModel
 @{
-    ViewData["Title"] = "Edit Car Details";
+    ViewData["Title"] = "Edit Car";
 }
 
 <link rel="stylesheet" href="css/style.css" asp-append-version="true" />
-<link rel="stylesheet" href="css/carInfo.css" />
+<link rel="stylesheet" href="css/carstyle.css" />
 
 <div style="text-align: center">
-    <h1>Edit Car Details</h1>
+    <h1>Edit Car</h1>
     <form method="post">
+
         <label asp-for="@Model.car.Model">Model:</label>
         <input class="CarDetails" type="text" asp-for="@Model.car.Model"><br>
         <p><span asp-validation-for="@Model.car.Model"></span></p>
