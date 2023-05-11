@@ -1,6 +1,7 @@
 using JSJMExoticCarsWebApp.Models;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace JSJMExoticCarsWebApp
 {
     public class Program
@@ -13,8 +14,13 @@ namespace JSJMExoticCarsWebApp
             builder.Services.AddRazorPages();
             builder.Services.AddControllers();
             builder.Services.AddDbContext<CarDbContext>(options => options.UseSqlServer(
-                builder.Configuration.GetConnectionString("CarDbContext")
-                ));          
+                builder.Configuration.GetConnectionString("CarDBConnectionString")
+                ));
+
+            builder.Services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "API", Version = "v1" });
+            });
 
             var app = builder.Build();          
 
@@ -34,11 +40,14 @@ namespace JSJMExoticCarsWebApp
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
+            app.MapRazorPages();
+            app.MapControllers();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
             {
-                app.MapRazorPages();
-                app.MapControllers();
-            });            
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
+            });
 
             app.Run();
         }

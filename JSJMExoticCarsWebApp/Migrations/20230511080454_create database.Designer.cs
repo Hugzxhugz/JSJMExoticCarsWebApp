@@ -3,6 +3,7 @@ using JSJMExoticCarsWebApp.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JSJMExoticCarsWebApp.Migrations
 {
     [DbContext(typeof(CarDbContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20230511080454_create database")]
+    partial class createdatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,46 +28,34 @@ namespace JSJMExoticCarsWebApp.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("Car_id");
+                        .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Brand")
+                    b.Property<string>("CarBrand")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("car_brand");
 
+                    b.Property<string>("CarModel")
+                        .IsRequired()
+                        .HasMaxLength(45)
+                        .HasColumnType("nvarchar(45)")
+                        .HasColumnName("car_model");
+
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
                         .HasColumnName("car_description");
 
                     b.Property<int>("Fuel")
                         .HasColumnType("int")
-                        .HasColumnName("car_fueltype");
-
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("car_image_url");
-
-                    b.Property<bool>("Listed")
-                        .HasColumnType("bit")
-                        .HasColumnName("car_listed");
+                        .HasColumnName("car_fuel_type");
 
                     b.Property<int>("Mileage")
                         .HasColumnType("int")
-                        .HasColumnName("car_milage");
-
-                    b.Property<string>("Model")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("car_model");
-
-                    b.Property<int>("ModelYear")
-                        .HasColumnType("int")
-                        .HasColumnName("car_model_year");
+                        .HasColumnName("car_mileage");
 
                     b.Property<int>("Price")
                         .HasColumnType("int")
@@ -72,7 +63,11 @@ namespace JSJMExoticCarsWebApp.Migrations
 
                     b.Property<int>("Transmission")
                         .HasColumnType("int")
-                        .HasColumnName("car_transmission");
+                        .HasColumnName("car_transmission_type");
+
+                    b.Property<int>("YearModel")
+                        .HasColumnType("int")
+                        .HasColumnName("car_year_model");
 
                     b.HasKey("Id");
 
