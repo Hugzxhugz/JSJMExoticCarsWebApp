@@ -8,7 +8,7 @@ namespace JSJMExoticCarsWebApp.Models;
 public class Car
 {
     [Key]
-    [Column("Car_id")]
+    [Column("car_id")]
     public int Id { get; set; }
 
     [Required]

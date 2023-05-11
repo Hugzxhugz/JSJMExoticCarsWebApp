@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JSJMExoticCarsWebApp.Migrations
 {
     [DbContext(typeof(CarDbContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    partial class CarDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -27,7 +27,7 @@ namespace JSJMExoticCarsWebApp.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("Car_id");
+                        .HasColumnName("car_id");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
@@ -109,7 +109,7 @@ namespace JSJMExoticCarsWebApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("UsersTable");
                 });
 
             modelBuilder.Entity("JSJMExoticCarsWebApp.Models.Car", b =>

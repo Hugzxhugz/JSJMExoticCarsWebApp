@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace JSJMExoticCarsWebApp.Models
 {
+    [Table("UsersTable")]
     public class User
     {
         [Key]
