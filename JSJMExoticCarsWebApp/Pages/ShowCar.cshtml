@@ -1,5 +1,5 @@
 ﻿@page
-@model JSJMExoticCarsWebApp.Pages.ShowCarsModel;
+@model JSJMExoticCarsWebApp.Pages.ShowCarModel;
 @{
     ViewData["Title"] = "Car Details";
 }
@@ -13,11 +13,11 @@
     <form method="get">
         <div class="car-details">
             <label>Car Model:</label>
-            <div>@Model.Car.CarModel</div><br />
+            <div>@Model.Car.Model</div><br />
             <label>Car Brand:</label>
-            <div>@Model.Car.CarBrand</div><br />
+            <div>@Model.Car.Brand</div><br />
             <label>Year Model:</label>
-            <div>@Model.Car.YearModel</div><br />
+            <div>@Model.Car.ModelYear</div><br />
             <label>Description:</label>
             <div>@Model.Car.Description</div><br />
             <label>Mileage:</label>
@@ -31,5 +31,5 @@
         </div>
     </form>
     <br />
-    <button onclick="location.href='@Url.Page("/EditCarDetails", new { id = @Model.Car.Id })'">Edit Car Details</button>
+    <button onclick="location.href='@Url.Page("/EditCar", new { id = @Model.Car.Id })'">Edit Car</button>
 </div>
