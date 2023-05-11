@@ -1,5 +1,5 @@
 ﻿@page
-@model JSJMExoticCarsWebApp.Models.Car
+@model JSJMExoticCarsWebApp.Pages.ShowCarsModel;
 @{
     ViewData["Title"] = "Car Details";
 }
@@ -7,21 +7,29 @@
 <link rel="stylesheet" href="css/style.css" asp-append-version="true" />
 <link rel="stylesheet" href="css/addCar.css"/>
 
-<div style="text-align: center";>
-    <h1>Car Details</h1>
-        <form method="get">
-            <label asp-for="@Model.Model">Car Model:</label>
-            <input type="text" id="Model" name="carModel"><br>
-            <label asp-for="@Model.Brand">Car Brand:</label>
-            <input type="text" id="Brand" name="carBrand"><br>
-        <label asp-for="@Model.ModelYear">Year Model:</label>
-        <input type="number" id="ModelYear" name="yearModel"><br>
-            <label asp-for="@Model.Description">Description:</label>
-            <input type="text" id="Description" name="description"><br>
-            <label asp-for="@Model.Mileage">Mileage:</label>
-            <input type="number" id="Mileage" name="mileage"><br>
-            <button type="submit">Update Car</button>
-            <button type="submit" formaction="/Delete">Delete Car</button>
-        </form>
 
+<div style="text-align: center" ;>
+    <h1>Car Details</h1>
+    <form method="get">
+        <div class="car-details">
+            <label>Car Model:</label>
+            <div>@Model.Car.CarModel</div><br />
+            <label>Car Brand:</label>
+            <div>@Model.Car.CarBrand</div><br />
+            <label>Year Model:</label>
+            <div>@Model.Car.YearModel</div><br />
+            <label>Description:</label>
+            <div>@Model.Car.Description</div><br />
+            <label>Mileage:</label>
+            <div>@Model.Car.Mileage</div><br />
+            <label>Transmission Type:</label>
+            <div>@Model.Car.Transmission</div><br />
+            <label>Fuel Type:</label>
+            <div>@Model.Car.Fuel</div><br />
+            <label>Price:</label>
+            <div>@Model.Car.Price</div><br />
+        </div>
+    </form>
+    <br />
+    <button onclick="location.href='@Url.Page("/EditCarDetails", new { id = @Model.Car.Id })'">Edit Car Details</button>
 </div>
