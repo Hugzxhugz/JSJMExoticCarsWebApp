@@ -34,7 +34,7 @@ namespace JSJMExoticCarsWebApp.Models
 
         public static void UpdateUser(UserSession userSession, CarDbContext carDbContext)
         {
-            var user = carDbContext.Users.FirstOrDefault(m => m.Id == userSession.Id);
+			var user = carDbContext.Users.Include(m => m.Cars).FirstOrDefault(u => u.Id == userSession.Id); 
 
             if (user == null) return;
 

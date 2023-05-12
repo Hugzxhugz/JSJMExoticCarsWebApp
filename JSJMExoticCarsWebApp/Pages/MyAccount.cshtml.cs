@@ -9,12 +9,17 @@ namespace JSJMExoticCarsWebApp.Pages
         [BindProperty]
         public UserSession Session { get; set; }
 
-        public void OnGet()
+        public ActionResult OnGet()
         {
             byte[] userSessionBytes = HttpContext.Session.Get("UserSession");
-
+            if(userSessionBytes == null) 
+            {
+                Session = new UserSession();
+                
+                return RedirectToPage("/SignIn"); ;
+            }
             Session = UserSession.ConvertBytesToUserSession(userSessionBytes);
-
+            return Page();
         }
     }
 }

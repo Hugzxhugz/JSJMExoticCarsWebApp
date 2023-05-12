@@ -46,10 +46,5 @@ namespace JSJMExoticCarsWebApp.Pages
 
             return RedirectToPage("/Index");
         }
-
-        private object Include(Func<object, object> value)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
