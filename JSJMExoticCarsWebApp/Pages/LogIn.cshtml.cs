@@ -27,7 +27,7 @@ namespace JSJMExoticCarsWebApp.Pages
 
         public IActionResult OnPost()
         {
-            var user = _context.Users.FirstOrDefault(u => u.Name == Username && u.Password == Password);
+            var user = _context.Users.Include(u => u.Cars).FirstOrDefault(u => u.Name == Username && u.Password == Password);
             if (user == null)
             {
                 ErrorMessage = "Invalid username or password";
@@ -45,6 +45,11 @@ namespace JSJMExoticCarsWebApp.Pages
             HttpContext.Session.Set("UserSession", UserSession.ConvertUserSessionToBytes(userSession));
 
             return RedirectToPage("/Index");
+        }
+
+        private object Include(Func<object, object> value)
+        {
+            throw new NotImplementedException();
         }
     }
 }

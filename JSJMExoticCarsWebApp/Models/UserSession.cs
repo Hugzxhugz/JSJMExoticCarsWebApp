@@ -1,5 +1,6 @@
 ﻿using System.Text.Json;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
 
 namespace JSJMExoticCarsWebApp.Models
 {
@@ -39,10 +40,22 @@ namespace JSJMExoticCarsWebApp.Models
 
             user.Name = userSession.Name;
             user.Funds = userSession.Funds;
-            user.Cars = userSession.Cars;
 
             carDbContext.Users.Update(user);
             carDbContext.SaveChanges();
+        }
+
+        public static UserSession UpdateUserSession(UserSession userSession, CarDbContext cdbc)
+        {
+            var user = cdbc.Users.Include(m => m.Cars).FirstOrDefault(u => u.Id == userSession.Id);
+
+            if (user == null) return new UserSession();
+
+            userSession.Name = user.Name;
+            userSession.Funds = user.Funds;
+            userSession.Cars = user.Cars;
+
+            return userSession;
         }
     }
 }

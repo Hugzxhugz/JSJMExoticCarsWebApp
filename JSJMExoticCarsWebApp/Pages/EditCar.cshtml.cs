@@ -38,12 +38,12 @@ namespace JSJMExoticCarsWebApp.Pages
 
                 if (carToDelete == null) return NotFound();
 
-                // Set the Id property explicitly
                 carToDelete.Id = id.Value;
 
                 dbc.Cars.Remove(carToDelete);
                 dbc.SaveChanges();
-
+                UpdateSession();
+           
                 return RedirectToPage("/Market");
             }
 
@@ -66,11 +66,19 @@ namespace JSJMExoticCarsWebApp.Pages
 
                 dbc.Cars.Update(carToUpdate);
                 dbc.SaveChanges();
+                UpdateSession();
 
                 return RedirectToPage("/Market");
             }
 
             return Page();
+        }
+
+        public void UpdateSession()
+        {
+            UserSession userSession = UserSession.ConvertBytesToUserSession(HttpContext.Session.Get("UserSession"));
+            userSession = UserSession.UpdateUserSession(userSession, dbc);
+            HttpContext.Session.Set("UserSession", UserSession.ConvertUserSessionToBytes(userSession));
         }
     }
 }
