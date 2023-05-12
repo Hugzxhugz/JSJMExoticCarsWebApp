@@ -7,14 +7,14 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace JSJMExoticCarsWebApp.Pages;
 
-public class addCar : PageModel
+public class AddCar : PageModel
 {
     CarDbContext carDbContext;
 
     [BindProperty]
     public Car Car { get; set; }
 
-    public addCar(CarDbContext carDbContext)
+    public AddCar(CarDbContext carDbContext)
     {
         this.carDbContext = carDbContext;
     }
@@ -25,14 +25,16 @@ public class addCar : PageModel
 
     public ActionResult OnPost()
     {
-        if (ModelState.IsValid)
-        {
-            Car.Listed = true;
-            carDbContext.Cars.Add(Car);
-            carDbContext.SaveChanges();
-            return RedirectToPage("/Market");
-        }
-        return Page();
+        if (HttpContext.Session.Get("UserSession") == null) return RedirectToPage("/MyAccount");
+
+        if (ModelState.IsValid) return Page();
+
+        Car.Listed = true;
+        carDbContext.Cars.Add(Car);
+        carDbContext.SaveChanges();
+        return RedirectToPage("/Market");
+        
+        
     }
 }
 

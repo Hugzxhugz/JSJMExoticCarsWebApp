@@ -82,7 +82,7 @@ namespace JSJMExoticCarsWebApp.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("CarTable");
+                    b.ToTable("CarTable", (string)null);
                 });
 
             modelBuilder.Entity("JSJMExoticCarsWebApp.Models.User", b =>
@@ -109,7 +109,7 @@ namespace JSJMExoticCarsWebApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("UsersTable");
+                    b.ToTable("UsersTable", (string)null);
                 });
 
             modelBuilder.Entity("JSJMExoticCarsWebApp.Models.Car", b =>

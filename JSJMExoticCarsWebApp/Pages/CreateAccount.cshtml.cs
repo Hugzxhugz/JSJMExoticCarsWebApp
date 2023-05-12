@@ -6,10 +6,10 @@ namespace JSJMExoticCarsWebApp.Pages
 {
     public class CreateAccountModel : PageModel
     {
-        private CarDbContext _context;
+        CarDbContext _context;
 
         [BindProperty]
-        public User user { get; set; }
+        public User User { get; set; }
 
         public CreateAccountModel(CarDbContext carDbContext)
         {
@@ -20,12 +20,16 @@ namespace JSJMExoticCarsWebApp.Pages
 
         }
 
-        public void OnPost()
+        public ActionResult OnPost()
         {
             if(ModelState.IsValid)
             {
-
+                User.Funds = 0;
+                _context.Users.Add(User);
+                _context.SaveChanges();
+                return RedirectToPage("/Market");
             }
+            return Page();
         }
     }
 }

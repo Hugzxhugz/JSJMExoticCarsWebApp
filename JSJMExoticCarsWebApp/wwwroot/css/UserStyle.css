@@ -1,3 +1,10 @@
 ﻿.SignInBox{
     text-align: center;
 }
+label{
+    display: block;
+}
+input{
+    display: block;
+    margin: auto;
+}

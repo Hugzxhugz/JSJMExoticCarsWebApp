@@ -1,0 +1,27 @@
+﻿@page
+@model JSJMExoticCarsWebApp.Pages.LogInModel
+@{
+	ViewData["Tittle"] = "Log in";
+}
+
+<link rel="stylesheet" href="css/carstyle.css" />
+<link rel="stylesheet" href="~/css/UserStyle.css" />
+
+<h1>Login</h1>
+
+<form method="post">
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="Username" required />
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="Password" required />
+    </div>
+    <button type="submit">Login</button>
+</form>
+
+@if (Model.ErrorMessage != null)
+{
+    <p>@Model.ErrorMessage</p>
+}

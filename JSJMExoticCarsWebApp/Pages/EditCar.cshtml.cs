@@ -44,8 +44,6 @@ namespace JSJMExoticCarsWebApp.Pages
                 dbc.Cars.Remove(carToDelete);
                 dbc.SaveChanges();
 
-                TempData["Message"] = "Car deleted successfully.";
-
                 return RedirectToPage("/Market");
             }
 
@@ -68,8 +66,6 @@ namespace JSJMExoticCarsWebApp.Pages
 
                 dbc.Cars.Update(carToUpdate);
                 dbc.SaveChanges();
-
-                TempData["Message"] = "Car details updated successfully!";
 
                 return RedirectToPage("/Market");
             }

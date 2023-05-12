@@ -22,6 +22,6 @@ namespace JSJMExoticCarsWebApp.Models
         public int Funds { get; set; }
 
         [Column("car_owner_id")]
-        public List<Car> Cars { get; set; }
+        public List<Car> Cars { get; set; } = new List<Car>();
     }
 }
