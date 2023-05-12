@@ -6,9 +6,10 @@
 
 <link rel="stylesheet" href="css/carstyle.css" />
 
-<div style="text-align: center";>
+<form method="post" style="text-align: center";>
     <h1>@ViewData["Title"]</h1>
     <p>Use this page to display cars.</p><br>
+
 
     @foreach (Models.Car car in Model.Cars)
     {
@@ -24,8 +25,12 @@
     }
 
 
-    <button onclick="location.href='@Url.Page("/AddCar")'" class="btn btn-primary">Add Car</button>
-</div>
+    <button asp-page-handler="AddCarPage" class="btn btn-primary">Add Car</button>
+    @if (Model.ErrorMessage != null)
+    {
+        <p>@Model.ErrorMessage</p>
+    }
+</form>
 
 
 
