@@ -50,8 +50,6 @@ namespace JSJMExoticCarsWebApp.Pages
 
                 return RedirectToPage("/MyAccount");
             }
-               
-
             return RedirectToPage("/BuyCar", new { id = carid });
         }
 

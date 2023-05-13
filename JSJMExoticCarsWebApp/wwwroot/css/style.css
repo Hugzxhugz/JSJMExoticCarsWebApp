@@ -137,7 +137,6 @@ h1{
 }
 
 .text-box {
-    
     width: 80%;
     margin: 20px auto;
     padding: 20px;
@@ -187,4 +186,36 @@ button:hover{
 .SignInBox {
     text-align: center;
     margin: auto;
+}
+
+.CarDetails {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #DDBB71;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.selectEnums {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #DDBB71;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.SignInInput {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #DDBB71;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
 }

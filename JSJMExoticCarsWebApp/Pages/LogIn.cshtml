@@ -4,17 +4,15 @@
 	ViewData["Tittle"] = "Log in";
 }
 
-<link rel="stylesheet" href="~/css/carstyle.css" />
-
 <form class="SignInBox" method="post">
     <h1>Login</h1>
     <div class="SingInBox">
         <label for="username">Username:</label>
-        <input class="CarDetails" type="text" id="username" name="Username" required />
+        <input class="SignInInput" type="text" id="username" name="Username" required />
     </div>
     <div class="SingInBox">
         <label for="password">Password:</label>
-        <input class="CarDetails" type="password" id="password" name="Password" required />
+        <input class="SignInInput" type="password" id="password" name="Password" required />
     </div>
     <button type="submit">Login</button>
     @if (Model.ErrorMessage != null)
