@@ -39,9 +39,7 @@ namespace JSJMExoticCarsWebApp.Pages
 			UserSession.UpdateUser(session, _context);
 
 
-			UserSession userSession = UserSession.ConvertBytesToUserSession(HttpContext.Session.Get("UserSession"));
-			userSession = UserSession.UpdateUserSession(userSession, _context);
-			HttpContext.Session.Set("UserSession", UserSession.ConvertUserSessionToBytes(userSession));
+			HttpContext.Session.Set("UserSession", UserSession.ConvertUserSessionToBytes(session));
 
 			return RedirectToPage("/MyAccount");
 		}

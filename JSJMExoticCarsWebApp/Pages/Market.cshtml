@@ -15,7 +15,7 @@
     {
         if(car.Listed == true)
         {
-            <div class="carobject" onclick="location.href='@Url.Page("/ShowCar", new { id = car.Id })'">
+            <div class="carobject" onclick="location.href='@Url.Page("/BuyCar", new { id = car.Id })'">
                 <p>Brand: @car.Brand, Model: @car.Model, Model year: @car.ModelYear</p>
                 <p>Milage: @car.Mileage km</p>
                 <p>Transmission: @car.Transmission, Fuel: @car.Fuel</p>

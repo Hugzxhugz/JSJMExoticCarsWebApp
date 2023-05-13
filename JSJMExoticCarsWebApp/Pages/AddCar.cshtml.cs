@@ -18,23 +18,31 @@ public class AddCar : PageModel
     {
         this.carDbContext = carDbContext;
     }
-    public void OnGet()
+    public ActionResult OnGet()
     {
-        
-    }
+		byte[] userSessionBytes = HttpContext.Session.Get("UserSession");
+		if (userSessionBytes == null) return RedirectToPage("/SignIn");
+		return Page();
+	}
 
     public ActionResult OnPost()
     {
-        if (HttpContext.Session.Get("UserSession") == null) return RedirectToPage("/MyAccount");
+        if (!ModelState.IsValid) return Page();
 
-        if (ModelState.IsValid) return Page();
+		Car.Listed = true;
 
-        Car.Listed = true;
-        carDbContext.Cars.Add(Car);
-        carDbContext.SaveChanges();
+        UserSession session = UserSession.ConvertBytesToUserSession(HttpContext.Session.Get("UserSession"));
+
+        if (session == null) return RedirectToPage("/SignIn");
+
+        session.Cars.Add(Car);
+
+        UserSession.UpdateUser(session, carDbContext);
+
+        HttpContext.Session.Set("UserSession", UserSession.ConvertUserSessionToBytes(session));
+
+		
         return RedirectToPage("/Market");
-        
-        
     }
 }
 
