@@ -20,7 +20,7 @@ namespace JSJMExoticCarsWebApp.Controllers
             _context = context;
         }
 
-        // GET: api/Cars/get
+        // GET: api/car/get
         [HttpGet("get")]
         public async Task<ActionResult<IEnumerable<Car>>> GetCars()
         {
@@ -31,7 +31,7 @@ namespace JSJMExoticCarsWebApp.Controllers
             return await _context.Cars.ToListAsync();
         }
 
-        // GET: api/Cars/get/5
+        // GET: api/car/get/5
         [HttpGet("get/{id}")]
         public async Task<ActionResult<Car>> GetCar(int id)
         {
@@ -49,7 +49,7 @@ namespace JSJMExoticCarsWebApp.Controllers
             return car;
         }
 
-        // PUT: api/Cars/put/5      
+        // PUT: api/car/put/5      
         [HttpPut("put/{id}")]
         public async Task<IActionResult> PutCar(int id, Car car)
         {
@@ -79,7 +79,7 @@ namespace JSJMExoticCarsWebApp.Controllers
             return NoContent();
         }
 
-        // POST: api/Cars/post      
+        // POST: api/car/post      
         [HttpPost("post")]
         public async Task<ActionResult<Car>> PostCar(Car car)
         {
@@ -89,7 +89,7 @@ namespace JSJMExoticCarsWebApp.Controllers
             return CreatedAtAction("GetCar", new { id = car.Id }, car);
         }
 
-        // DELETE: api/Cars/delete/5
+        // DELETE: api/car/delete/5
         [HttpDelete("delete/{id}")]
         public async Task<IActionResult> DeleteCar(int id)
         {

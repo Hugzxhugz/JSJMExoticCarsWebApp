@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JSJMExoticCarsWebApp.Migrations
 {
     [DbContext(typeof(CarDbContext))]
-    [Migration("20230511080454_create database")]
+    [Migration("20230513201650_create database")]
     partial class createdatabase
     {
         /// <inheritdoc />
