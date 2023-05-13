@@ -1,0 +1,17 @@
+﻿@page
+@model JSJMExoticCarsWebApp.Pages.AddFundsModel
+@{
+	ViewData["Tittle"] = "Add Funds";
+}
+
+<link rel="stylesheet" href="~/css/carstyle.css" />
+<link rel="stylesheet" href="~/css/UserStyle.css" />
+
+<form method="post">
+	<h1>Add Funds</h1>
+	<label for="funds">Current Funds</label>
+	<h2 name="funds">@Model.CurrentFunds</h2>
+	<label asp-for="@Model.NewFunds">Amount to add</label>
+	<input asp-for="@Model.NewFunds" type="number" />
+	<button type="submit">Add</button>
+</form>

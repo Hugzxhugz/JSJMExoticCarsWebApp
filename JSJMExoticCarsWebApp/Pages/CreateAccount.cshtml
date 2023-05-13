@@ -1,0 +1,17 @@
+﻿@page
+@model JSJMExoticCarsWebApp.Pages.CreateAccountModel
+@{
+	ViewData["Tittle"] = "Register user";
+}
+<link rel="stylesheet" href="~/css/carstyle.css" />
+<link rel="stylesheet" href="~/css/UserStyle.css" />
+
+<form class="SignInBox" method="post">
+	<h1>Register</h1>
+	<label asp-for="@Model.User.Name"></label>
+	<input asp-for="@Model.User.Name" type="text" />
+	<label asp-for="@Model.User.Password"></label>
+	<input asp-for="@Model.User.Password" type="password"/>
+	<button type="submit">Register Account</button>
+</form>
+	

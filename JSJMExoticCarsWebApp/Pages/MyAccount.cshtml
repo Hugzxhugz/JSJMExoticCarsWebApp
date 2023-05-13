@@ -1,0 +1,27 @@
+﻿@page
+@model JSJMExoticCarsWebApp.Pages.MyAccountModel
+@{
+	ViewData["Tittle"] = "My Account";
+}
+
+<link rel="stylesheet" href="~/css/carstyle.css" />
+<link rel="stylesheet" href="~/css/UserStyle.css" />
+
+<div>
+	<label for="name">Username:</label>
+	<h2 name="name">@Model.Session.Name</h2>
+	<label for="funds">Your funds:</label>
+	<h2 name="funds">@Model.Session.Funds</h2>
+    <a href="/AddFunds"><button>Add Funds</button></a>
+</div>
+<h1>Your cars</h1>
+@foreach (Models.Car car in Model.Session.Cars)
+{
+    <div class="carobject" onclick="location.href='@Url.Page("/ShowCar", new { id = car.Id })'">
+        <p>Brand: @car.Brand, Model: @car.Model, Model year: @car.ModelYear</p>
+        <p>Milage: @car.Mileage km</p>
+        <p>Transmission: @car.Transmission, Fuel: @car.Fuel</p>
+        <p>Price: @car.Price kr, Listed: @car.Listed</p>
+    </div>
+    <br>
+}

@@ -1,54 +1,48 @@
-﻿using System.Net.NetworkInformation;
-using System.Text.Json;
+﻿using System.Text.Json;
 using JSJMExoticCarsWebApp.Models;
-using JSJMExoticCarsWebApp.Models.Enums;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 
 
-
 namespace JSJMExoticCarsWebApp.Pages;
 
-public class addCarModel : PageModel
+public class AddCar : PageModel
 {
-    CarDbContext dbc;
-    
+    CarDbContext carDbContext;
+
     [BindProperty]
-    public Car car { get; set; }
+    public Car Car { get; set; }
 
-    public addCarModel(CarDbContext dbc)
+    public AddCar(CarDbContext carDbContext)
     {
-        this.dbc = dbc;
+        this.carDbContext = carDbContext;
     }
-
-    
-
-    public void OnGet()
+    public ActionResult OnGet()
     {
-        car = new Car();
-    }
+		byte[] userSessionBytes = HttpContext.Session.Get("UserSession");
+		if (userSessionBytes == null) return RedirectToPage("/SignIn");
+		return Page();
+	}
 
-    public IActionResult OnPost()
+    public ActionResult OnPost()
     {
-        if (ModelState.IsValid)
-        {
-            dbc.Cars.Add(car);
-            int result = dbc.SaveChanges();
+        if (!ModelState.IsValid) return Page();
 
-            if (result > 0)
-            {
-                TempData["Message"] = "Car added successfully!";
-                return RedirectToPage("/Market");
-            }
-            else
-            {
-                TempData["Message"] = "Error adding car.";
-            }
-        }
+		Car.Listed = true;
 
-        return Page();
+        UserSession session = UserSession.ConvertBytesToUserSession(HttpContext.Session.Get("UserSession"));
+
+        if (session == null) return RedirectToPage("/SignIn");
+
+        session.Cars.Add(Car);
+
+        UserSession.UpdateUser(session, carDbContext);
+
+        HttpContext.Session.Set("UserSession", UserSession.ConvertUserSessionToBytes(session));
+
+		
+        return RedirectToPage("/Market");
     }
-
 }
 
