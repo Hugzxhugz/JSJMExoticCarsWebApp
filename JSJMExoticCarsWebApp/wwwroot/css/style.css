@@ -179,3 +179,12 @@ button:hover{
     color: #3C4B8E;
     border: none;
 }
+
+.Error {
+    color: red;
+}
+
+.SignInBox {
+    text-align: center;
+    margin: auto;
+}
