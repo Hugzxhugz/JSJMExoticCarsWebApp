@@ -1,10 +1,12 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
+﻿var initialState = localStorage.getItem('asideState') || 'hidden';
 var aside = document.querySelector('aside');
 var toggleButton = document.querySelector('.toggle-aside');
 
-toggleButton.addEventListener('click', function() {
-    aside.classList.toggle('hidden')
+aside.classList.add(initialState);
+
+toggleButton.addEventListener('click', function () {
+    aside.classList.toggle('hidden');
+
+    var currentState = aside.classList.contains('hidden') ? 'hidden' : '';
+    localStorage.setItem('asideState', currentState);
 });
