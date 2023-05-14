@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSJMExoticCarsWebApp", "JSJMExoticCarsWebApp\JSJMExoticCarsWebApp.csproj", "{E0ACC179-8709-4594-9B07-EDC5F8C62711}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSJMClient", "JSJMClient\JSJMClient.csproj", "{1C704E3E-4CF5-409B-AE34-C41BC68D7663}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E0ACC179-8709-4594-9B07-EDC5F8C62711}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0ACC179-8709-4594-9B07-EDC5F8C62711}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0ACC179-8709-4594-9B07-EDC5F8C62711}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C704E3E-4CF5-409B-AE34-C41BC68D7663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C704E3E-4CF5-409B-AE34-C41BC68D7663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C704E3E-4CF5-409B-AE34-C41BC68D7663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C704E3E-4CF5-409B-AE34-C41BC68D7663}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
