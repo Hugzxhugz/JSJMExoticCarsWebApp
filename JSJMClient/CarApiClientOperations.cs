@@ -1,6 +1,6 @@
-﻿using Newtonsoft.Json;
-using System.Net;
+﻿using System.Net;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace JSJMClientApplication;
 
@@ -25,13 +25,14 @@ public class CarApiClientOperations
             foreach (var car in cars)
             { 
                 Console.WriteLine($"ID: {car.Id}");
-                Console.WriteLine($"Brand: {car.Brand}");
-                Console.WriteLine($"Model: {car.Model}");
-                Console.WriteLine($"Model Year : {car.ModelYear}");
+                Console.WriteLine($"Car Model: {car.Model}");
+                Console.WriteLine($"Car Brand: {car.Brand}");
+                Console.WriteLine($"Year Model: {car.ModelYear}");
                 Console.WriteLine($"Mileage: {car.Mileage}");
                 Console.WriteLine($"Description: {car.Description}");
                 Console.WriteLine($"Transmission Type: {car.Transmission}");
                 Console.WriteLine($"Fuel Type: {car.Fuel}");
+                Console.WriteLine($"Listed: {car.Listed}");
                 Console.WriteLine($"Price: {car.Price}");
                 Console.WriteLine();
             }
@@ -54,13 +55,14 @@ public class CarApiClientOperations
             {
                 var car = await response.Content.ReadAsAsync<Car>();
                 Console.WriteLine($"ID: {car.Id}");
-                Console.WriteLine($"Brand: {car.Brand}");
-                Console.WriteLine($"Model: {car.Model}");
-                Console.WriteLine($"Model Year: {car.ModelYear}");
+                Console.WriteLine($"Car Brand: {car.Brand}");
+                Console.WriteLine($"Car Model: {car.Model}");
+                Console.WriteLine($"Year Model: {car.ModelYear}");
                 Console.WriteLine($"Mileage: {car.Mileage}");
                 Console.WriteLine($"Description: {car.Description}");
                 Console.WriteLine($"Transmission Type: {car.Transmission}");
                 Console.WriteLine($"Fuel Type: {car.Fuel}");
+                Console.WriteLine($"Listed: {car.Listed}");
                 Console.WriteLine($"Price: {car.Price}");
                 Console.WriteLine();
             }

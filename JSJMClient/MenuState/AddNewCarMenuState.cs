@@ -1,5 +1,4 @@
 ﻿using JSJMClientApplication.Abstract;
-using JSJMClientApplication.Commands.ApiCommands;
 using JSJMClientApplication.Interface;
 
 namespace JSJMClientApplication.MenuState

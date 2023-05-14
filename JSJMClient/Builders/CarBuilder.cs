@@ -62,6 +62,23 @@ public class CarBuilder : ICarBuilder
         return (FuelType)fuelInput;
     }
 
+    public bool SetListed()
+    {
+        string input = _getInputClass.GetString("Please enter if car is listed:");
+        while (input != "yes" && input != "no")
+        {
+            Console.WriteLine("Invalid input. Please enter if yes or no.");
+            input = _getInputClass.GetString("Please enter if car is listed:");
+        }
+        
+        if (input.Equals("yes"))
+        {
+            return true;
+        }
+
+        return false;
+    }
+
     public int SetPrice()
     {
         int price = _getInputClass.GetInt("Please enter the car price:");
@@ -77,6 +94,7 @@ public class CarBuilder : ICarBuilder
         string description = SetDescription();
         TransmissionType transmission = SetTransmissionType();
         FuelType fuel = SetFuelType();
+        bool listed = SetListed();
         int price = SetPrice();
 
         Car car = new Car();
@@ -87,6 +105,7 @@ public class CarBuilder : ICarBuilder
         car.Description = description;
         car.Transmission = transmission;
         car.Fuel = fuel;
+        car.Listed = listed;
         car.Price = price;
 
         return car;

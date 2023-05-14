@@ -15,7 +15,7 @@ public class MoveToUpdateCarMenuCommand : ICommand
     }
     public void Execute()
     {
-        IMenuState addCarMenu = new UpdateCarMenuState();
-        addCarMenu.DisplayMenu();
+        IMenuState updateCarMenu = new UpdateCarMenuState();
+        updateCarMenu.DisplayMenu();
     }
 }

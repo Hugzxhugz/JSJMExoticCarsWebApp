@@ -59,6 +59,22 @@ public class UpdateCarBuilder
         car.Fuel = (FuelType)fuelInput;
     }
         
+    public bool UpdateListed(Car car)
+    {
+        string input = _getInputClass.GetString("Please enter if car is listed:");
+        while (input != "yes" || input != "no")
+        {
+            Console.WriteLine("Invalid input. Please enter if yes or no.");
+            input = _getInputClass.GetString("Please enter if car is listed:");
+        }
+        
+        if (input.Equals("yes"))
+        {
+            return car.Listed = true;
+        }
+
+        return car.Listed = false;
+    }
     public void UpdateCarPrice(Car car)
     {
         int price = _getInputClass.GetInt("Please enter the updated car price:");
@@ -75,7 +91,8 @@ public class UpdateCarBuilder
         Console.WriteLine("5. Description");
         Console.WriteLine("6. Transmission Type");
         Console.WriteLine("7. Fuel Type");
-        Console.WriteLine("8. Price");
+        Console.WriteLine("8. Listed");
+        Console.WriteLine("9. Price");
         int choice = _getInputClass.GetInt("Enter your choice:");
 
         switch (choice)
@@ -102,6 +119,9 @@ public class UpdateCarBuilder
                 UpdateCarFuelType(car);
                 break;
             case 8:
+                UpdateListed(car);
+                break;
+            case 9:
                 UpdateCarPrice(car);
                 break;
             default:
