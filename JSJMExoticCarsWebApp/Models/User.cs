@@ -9,15 +9,12 @@ namespace JSJMExoticCarsWebApp.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
         [Column("user_name")]
         public string Name { get; set; }
 
-        [Required]
         [Column("user_password")]
         public string Password { get; set; }
 
-        [Required]
         [Column("user_funds")]
         public int Funds { get; set; }
 
