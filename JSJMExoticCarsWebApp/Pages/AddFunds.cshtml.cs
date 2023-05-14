@@ -8,8 +8,6 @@ namespace JSJMExoticCarsWebApp.Pages
     {
 		CarDbContext _context;
 
-        [BindProperty]
-        public int CurrentFunds { get; set; }
 
 		[BindProperty]
 		public int NewFunds { get; set; }
@@ -23,7 +21,6 @@ namespace JSJMExoticCarsWebApp.Pages
 			byte[] userSessionBytes = HttpContext.Session.Get("UserSession");
 			if (userSessionBytes == null) return RedirectToPage("/SignIn");
 			return Page();
-			
 		}
 
 		public ActionResult OnPost()

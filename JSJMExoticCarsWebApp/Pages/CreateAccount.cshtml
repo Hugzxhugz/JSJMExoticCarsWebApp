@@ -3,15 +3,17 @@
 @{
 	ViewData["Tittle"] = "Register user";
 }
-<link rel="stylesheet" href="~/css/carstyle.css" />
-<link rel="stylesheet" href="~/css/UserStyle.css" />
 
 <form class="SignInBox" method="post">
 	<h1>Register</h1>
-	<label asp-for="@Model.User.Name"></label>
-	<input asp-for="@Model.User.Name" type="text" />
-	<label asp-for="@Model.User.Password"></label>
-	<input asp-for="@Model.User.Password" type="password"/>
+	<div class="SignInBox">
+		<label asp-for="@Model.User.Name"></label>
+		<input class="SignInInput" asp-for="@Model.User.Name" type="text" />
+	</div>
+	<div class="SignInBox">
+		<label asp-for="@Model.User.Password"></label>
+		<input class="SignInInput" asp-for="@Model.User.Password" type="password" />
+	</div>
 	<button type="submit">Register Account</button>
 </form>
 	
