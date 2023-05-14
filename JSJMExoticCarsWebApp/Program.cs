@@ -11,6 +11,7 @@ namespace JSJMExoticCarsWebApp
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddControllers();
             builder.Services.AddSession();
 
             builder.Services.AddDbContext<CarDbContext>(options =>
@@ -40,6 +41,7 @@ namespace JSJMExoticCarsWebApp
             app.UseAuthorization();
 
             app.MapRazorPages();
+            app.MapControllers();
 
             app.Run();
         }
