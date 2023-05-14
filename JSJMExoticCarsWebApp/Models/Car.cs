@@ -36,6 +36,11 @@ public class Car
     [Column("car_fuel_type")]
     public FuelType Fuel { get; set; }
 
+    [Required]
+    [Column("car_listed")]
+    public bool Listed { get; set; }
+
+    [Required]
     [Column("car_price")]
     public int Price { get; set; }
     

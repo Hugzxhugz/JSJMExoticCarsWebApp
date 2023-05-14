@@ -1,20 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace JSJMExoticCarsWebApp.Models;
-
-public class CarDbContext : DbContext
+namespace JSJMExoticCarsWebApp.Models
 {
-    public CarDbContext(DbContextOptions options) : base(options)
+    public class CarDbContext : DbContext
     {
-    }
+        public CarDbContext(DbContextOptions options) : base(options) 
+        { 
+            
+        }
 
-    public DbSet<Car> Cars{ get; set; }
-    
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        modelBuilder.Entity<Car>()
-            .Property(c => c.Id)
-            .ValueGeneratedOnAdd();
+        public DbSet<Car> Cars { get; set; }
+
+        public DbSet<User> Users { get; set; }
     }
-    
 }

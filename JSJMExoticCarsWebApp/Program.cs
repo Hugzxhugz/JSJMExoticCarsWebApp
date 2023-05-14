@@ -1,7 +1,6 @@
 using JSJMExoticCarsWebApp.Models;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace JSJMExoticCarsWebApp
 {
     public class Program
@@ -12,6 +11,12 @@ namespace JSJMExoticCarsWebApp
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddSession();
+
+            builder.Services.AddDbContext<CarDbContext>(options =>
+           options.UseSqlServer(
+               builder.Configuration.GetConnectionString("CarConnectionString")
+               ));
             builder.Services.AddControllers();
             builder.Services.AddDbContext<CarDbContext>(options => options.UseSqlServer(
                 builder.Configuration.GetConnectionString("CarDBConnectionString")
@@ -37,6 +42,7 @@ namespace JSJMExoticCarsWebApp
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseSession();
 
             app.UseAuthorization();
 
