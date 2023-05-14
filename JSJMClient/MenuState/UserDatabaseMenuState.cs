@@ -38,7 +38,7 @@ public class UserDatabaseMenuState : MenuStateFactory, IMenuState
         while (!userInput.Equals(_quitCommand))
         {
             Console.WriteLine($"{_currentMenu}:");
-            Console.WriteLine("Please select an option");
+            Console.WriteLine("Please select an option: ");
             PrintOptions();
             ExecuteCommandIfExists();
         }
