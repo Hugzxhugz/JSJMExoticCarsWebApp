@@ -1,28 +1,25 @@
-﻿@page
-@using JSJMExoticCarsWebApp.Models.Enums
-@model EditCarDetailsModel
-
+﻿@page 
+@using JSJMExoticCarsWebApp.Models.Enums;
+@model JSJMExoticCarsWebApp.Pages.EditCarModel
 @{
-    ViewData["Title"] = "Edit Car Details";
+    ViewData["Title"] = "Edit Car";
 }
 
-<link rel="stylesheet" href="css/style.css" asp-append-version="true" />
-<link rel="stylesheet" href="css/carInfo.css"/>
-
 <div style="text-align: center">
-    <h1>Edit Car Details</h1>
-        <form method="post">
-        <label asp-for="@Model.car.CarModel">Model:</label>
-        <input class="CarDetails" type="text" asp-for="@Model.car.CarModel"><br>
-        <p><span asp-validation-for="@Model.car.CarModel"></span></p>
+    <h1>Edit Car</h1>
+    <form method="post">
 
-        <label asp-for="@Model.car.CarBrand">Brand:</label>
-        <input class="CarDetails" type="text" asp-for="@Model.car.CarBrand"><br>
-        <p><span asp-validation-for="@Model.car.CarBrand"></span></p>
+        <label asp-for="@Model.car.Model">Model:</label>
+        <input class="CarDetails" type="text" asp-for="@Model.car.Model"><br>
+        <p><span asp-validation-for="@Model.car.Model"></span></p>
 
-        <label asp-for="@Model.car.YearModel">YearModel:</label>
-        <input class="CarDetails" type="number" asp-for="@Model.car.YearModel"><br>
-        <p><span asp-validation-for="@Model.car.YearModel"></span></p>
+        <label asp-for="@Model.car.Brand">Brand:</label>
+        <input class="CarDetails" type="text" asp-for="@Model.car.Brand"><br>
+        <p><span asp-validation-for="@Model.car.Brand"></span></p>
+
+        <label asp-for="@Model.car.ModelYear">YearModel:</label>
+        <input class="CarDetails" type="number" asp-for="@Model.car.ModelYear"><br>
+        <p><span asp-validation-for="@Model.car.ModelYear"></span></p>
 
         <label asp-for="@Model.car.Description">Description:</label>
         <textarea class="CarDetails" type="text" id="Description" asp-for="@Model.car.Description"></textarea><br>
@@ -53,7 +50,7 @@
         <p><span asp-validation-for="@Model.car.Price"></span></p>
 
         <button type="submit" name="submitAction" value="update">Update Car</button>
-            <button type="submit" name="submitAction" value="delete">Delete Car</button>
-        </form>
+        <button type="submit" name="submitAction" value="delete">Delete Car</button>
+    </form>
 
 </div>

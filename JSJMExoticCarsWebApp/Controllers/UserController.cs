@@ -11,54 +11,54 @@ namespace JSJMExoticCarsWebApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CarController : ControllerBase
+    public class UserController : ControllerBase
     {
         private readonly CarDbContext _context;
 
-        public CarController(CarDbContext context)
+        public UserController(CarDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/car/get
+        // GET: api/user/get
         [HttpGet("get")]
-        public async Task<ActionResult<IEnumerable<Car>>> GetCars()
+        public async Task<ActionResult<IEnumerable<User>>> GetUser()
         {
-            if (_context.Cars == null)
+            if (_context.Users == null)
             {
                 return NotFound();
             }
-            return await _context.Cars.ToListAsync();
+            return await _context.Users.ToListAsync();
         }
 
-        // GET: api/car/get/5
+        // GET: api/user/get/5
         [HttpGet("get/{id}")]
-        public async Task<ActionResult<Car>> GetCar(int id)
+        public async Task<ActionResult<User>> GetUser(int id)
         {
-            if (_context.Cars == null)
+            if (_context.Users == null)
             {
                 return NotFound();
             }
-            var car = await _context.Cars.FindAsync(id);
+            var user = await _context.Users.FindAsync(id);
 
-            if (car == null)
+            if (user == null)
             {
                 return NotFound();
             }
 
-            return car;
+            return user;
         }
 
-        // PUT: api/car/put/5      
+        // PUT: api/user/put/5      
         [HttpPut("put/{id}")]
-        public async Task<IActionResult> PutCar(int id, Car car)
+        public async Task<IActionResult> PutÚser(int id, User user)
         {
-            if (id != car.Id)
+            if (id != user.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(car).State = EntityState.Modified;
+            _context.Entry(user).State = EntityState.Modified;
 
             try
             {
@@ -66,7 +66,7 @@ namespace JSJMExoticCarsWebApp.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CarExists(id))
+                if (!UserExists(id))
                 {
                     return NotFound();
                 }
@@ -79,39 +79,39 @@ namespace JSJMExoticCarsWebApp.Controllers
             return NoContent();
         }
 
-        // POST: api/car/post      
+        // POST: api/user/post      
         [HttpPost("post")]
-        public async Task<ActionResult<Car>> PostCar(Car car)
+        public async Task<ActionResult<User>> PostUser(User user)
         {
-            _context.Cars.Add(car);
+            _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetCar", new { id = car.Id }, car);
+            return CreatedAtAction("GetUser", new { id = user.Id }, user);
         }
 
         // DELETE: api/car/delete/5
         [HttpDelete("delete/{id}")]
-        public async Task<IActionResult> DeleteCar(int id)
+        public async Task<IActionResult> DeleteUser(int id)
         {
-            if (_context.Cars == null)
+            if (_context.Users == null)
             {
                 return NotFound();
             }
-            var car = await _context.Cars.FindAsync(id);
-            if (car == null)
+            var user = await _context.Users.FindAsync(id);
+            if (user == null)
             {
                 return NotFound();
             }
 
-            _context.Cars.Remove(car);
+            _context.Users.Remove(user);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool CarExists(int id)
+        private bool UserExists(int id)
         {
-            return (_context.Cars?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Users?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

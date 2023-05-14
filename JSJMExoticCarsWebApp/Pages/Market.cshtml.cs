@@ -6,16 +6,32 @@ namespace JSJMExoticCarsWebApp.Pages
 {
     public class MarketModel : PageModel
     {
-        CarDbContext dbc;
-
-        public MarketModel(CarDbContext dbc)
+        public string ErrorMessage { get; set; }
+        CarDbContext CarDbContext { get; set; }
+        public MarketModel(CarDbContext cardb)
         {
-            this.dbc = dbc;
+            CarDbContext= cardb;
+            Cars = CarDbContext.Cars.ToList();
         }
-        public List<Car> cars { get; set; }
+
+        public List<Car> Cars { get; set; }
+
+
+
         public void OnGet()
         {
-            cars = dbc.Cars.ToList();
+            
+        }
+
+        public ActionResult OnPostAddCarPage()
+        {
+            if(HttpContext.Session.Get("UserSession") == null)
+            {
+                ErrorMessage = "You can't add a car if you are not signed in";
+                return Page();
+            }
+
+            return RedirectToPage("/AddCar");
         }
     }
 }
