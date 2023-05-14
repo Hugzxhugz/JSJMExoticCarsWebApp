@@ -10,17 +10,17 @@
 <div style="text-align: center";>
     <h1>Add a car to sell</h1>
         <form method="post">
-        <label asp-for="@Model.Car.Brand">Brand:</label>
-        <input class="CarDetails" type="text" asp-for="@Model.Car.Brand"><br>
-        <p><span asp-validation-for="@Model.Car.Brand"></span></p>
+        <label asp-for="@Model.Car.CarBrand">Brand:</label>
+        <input class="CarDetails" type="text" asp-for="@Model.Car.CarBrand"><br>
+        <p><span asp-validation-for="@Model.Car.CarBrand"></span></p>
 
-        <label asp-for="@Model.Car.Model">Model:</label>
-        <input class="CarDetails" type="text" asp-for="@Model.Car.Model"><br>
-        <p><span asp-validation-for="@Model.Car.Model"></span></p>
+        <label asp-for="@Model.Car.CarModel">Model:</label>
+        <input class="CarDetails" type="text" asp-for="@Model.Car.CarModel"><br>
+        <p><span asp-validation-for="@Model.Car.CarModel"></span></p>
 
-        <label asp-for="@Model.Car.ModelYear">Model Year:</label>
-        <input class="CarDetails" type="number" asp-for="@Model.Car.ModelYear"><br>
-        <p><span asp-validation-for="@Model.Car.ModelYear"></span></p>
+        <label asp-for="@Model.Car.YearModel">Model Year:</label>
+        <input class="CarDetails" type="number" asp-for="@Model.Car.YearModel"><br>
+        <p><span asp-validation-for="@Model.Car.YearModel"></span></p>
 
         <label asp-for="@Model.Car.Description">Description:</label>
         <textarea class="CarDetails" type="text" id="Description" asp-for="@Model.Car.Description"></textarea><br>

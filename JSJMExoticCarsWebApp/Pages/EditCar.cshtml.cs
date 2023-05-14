@@ -55,9 +55,9 @@ namespace JSJMExoticCarsWebApp.Pages
 
                 if (carToUpdate == null) return NotFound();
 
-                carToUpdate.Model = car.Model;
-                carToUpdate.Brand = car.Brand;
-                carToUpdate.ModelYear = car.ModelYear;
+                carToUpdate.CarModel = car.CarModel;
+                carToUpdate.CarBrand = car.CarBrand;
+                carToUpdate.YearModel = car.YearModel;
                 carToUpdate.Description = car.Description;
                 carToUpdate.Mileage = car.Mileage;
                 carToUpdate.Transmission = car.Transmission;
