@@ -5,7 +5,7 @@
 namespace JSJMExoticCarsWebApp.Migrations
 {
     /// <inheritdoc />
-    public partial class completedatabase : Migration
+    public partial class CreateDatabase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
