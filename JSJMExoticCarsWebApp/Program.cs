@@ -13,10 +13,7 @@ namespace JSJMExoticCarsWebApp
             builder.Services.AddRazorPages();
             builder.Services.AddSession();
 
-            builder.Services.AddDbContext<CarDbContext>(options =>
-           options.UseSqlServer(
-               builder.Configuration.GetConnectionString("CarConnectionString")
-               ));
+            
             builder.Services.AddControllers();
             builder.Services.AddDbContext<CarDbContext>(options => options.UseSqlServer(
                 builder.Configuration.GetConnectionString("CarDBConnectionString")
