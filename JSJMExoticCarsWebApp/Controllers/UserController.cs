@@ -5,7 +5,7 @@ namespace JSJMExoticCarsWebApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CarController : ControllerBase
+    public class UserController : ControllerBase
     {
     }
 }
