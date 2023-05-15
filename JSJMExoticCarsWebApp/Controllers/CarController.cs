@@ -79,14 +79,44 @@ namespace JSJMExoticCarsWebApp.Controllers
             return NoContent();
         }
 
-        // POST: api/car/post      
+        // POST: api/car/post
         [HttpPost("post")]
-        public async Task<ActionResult<Car>> PostCar(Car car)
-        {
+        public async Task<ActionResult<CarDTO>> PostCar(CarDTO carDto)
+        {   
+            var car = new Car
+            {
+                Model = carDto.Model,
+                Brand = carDto.Brand,
+                ModelYear = carDto.ModelYear,
+                Mileage = carDto.Mileage,
+                Description = carDto.Description,
+                ImageUrl = carDto.ImageUrl,
+                Transmission = carDto.Transmission,
+                Fuel = carDto.Fuel,
+                Listed = carDto.Listed,
+                Price = carDto.Price,                
+            };
+
             _context.Cars.Add(car);
             await _context.SaveChangesAsync();
+            
+            var resultDto = new CarDTO
+            {
+                Id = car.Id,
+                Model = car.Model,
+                Brand = car.Brand,
+                ModelYear = car.ModelYear,
+                Mileage = car.Mileage,
+                Description = car.Description,
+                ImageUrl = car.ImageUrl,
+                Transmission = car.Transmission,
+                Fuel = car.Fuel,
+                Listed = car.Listed,
+                Price = car.Price
+            };
 
-            return CreatedAtAction("GetCar", new { id = car.Id }, car);
+            return CreatedAtAction(nameof(GetCar), new { id = car.Id }, resultDto);
+
         }
 
         // DELETE: api/car/delete/5
