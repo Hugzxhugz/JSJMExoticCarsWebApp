@@ -5,11 +5,20 @@
 }
 
 <form class="SignInBox" method="post">
-	<h1>Register</h1>
-	<label asp-for="@Model.User.Name"></label>
-	<input class="SignInInput" asp-for="@Model.User.Name" type="text" />
-	<label asp-for="@Model.User.Password"></label>
-	<input class="SignInInput" asp-for="@Model.User.Password" type="password" />
-	<button type="submit">Register Account</button>
+	
+	
 </form>
 	
+<div class="SignInBox">
+    <form class="SignInBox" method="post">
+        <div>
+            <h1>Register</h1>
+            <label asp-for="@Model.User.Name"></label>
+            <input class="SignInInput" asp-for="@Model.User.Name" type="text" />
+            <label asp-for="@Model.User.Password"></label>
+            <input class="SignInInput" asp-for="@Model.User.Password" type="password" /><br />
+        </div>
+        <br />
+        <button type="submit">Register Account</button>
+    </form>
+</div>

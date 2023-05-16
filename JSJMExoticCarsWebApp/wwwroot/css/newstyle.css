@@ -348,7 +348,8 @@ button {
         }
 
 select {
-    background-color: #fff;
+    background-color: #1e697e;
+    color: #DDBB71;
     border: 1px solid #DDBB71;
     border-radius: 5px;
     padding: 10px;
@@ -370,7 +371,8 @@ label {
 }
 
 input {
-    background-color: #ffffff;
+    background-color: #1e697e;
+    color:#DDBB71;
     border: 1px solid #DDBB71;
     border-radius: 5px;
     padding: 5px;
@@ -386,7 +388,8 @@ input {
 
 
 textarea {
-    background-color: #ffffff;
+    background-color: #1e697e;
+    color: #DDBB71;
     border: 1px solid #DDBB71;
     border-radius: 5px;
     padding: 10px;
@@ -398,13 +401,8 @@ textarea {
 
 
 .SignInBox {
-    position: relative;
     text-align: center;
-    padding: 5px;
-    font-size: 16px;
-    width: 400px;
-    height: 50px;
-    margin: 10px;
+    margin: auto;
 }
 
 .Fundbox {
@@ -412,6 +410,7 @@ textarea {
 }
 
 .grid-container {
+    color: #DDBB71;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 20px;
@@ -425,5 +424,4 @@ textarea {
     box-shadow: 0px 2px 5px #DDBB71;
     text-align: center;
 }
-
 
