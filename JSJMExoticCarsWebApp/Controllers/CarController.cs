@@ -22,23 +22,18 @@ namespace JSJMExoticCarsWebApp.Controllers
 
         // GET: api/car/get
         [HttpGet("get")]
-        public async Task<ActionResult<IEnumerable<Car>>> GetCars()
+        public async Task<ActionResult<IEnumerable<CarDTO>>> GetCars()
         {
-            if (_context.Cars == null)
-            {
-                return NotFound();
-            }
-            return await _context.Cars.ToListAsync();
+            return await _context.Cars
+                .Select(x => CarToDTO(x))
+                .ToListAsync();
         }
+
 
         // GET: api/car/get/5
         [HttpGet("get/{id}")]
-        public async Task<ActionResult<Car>> GetCar(int id)
+        public async Task<ActionResult<CarDTO>> GetCar(int id)
         {
-            if (_context.Cars == null)
-            {
-                return NotFound();
-            }
             var car = await _context.Cars.FindAsync(id);
 
             if (car == null)
@@ -46,17 +41,34 @@ namespace JSJMExoticCarsWebApp.Controllers
                 return NotFound();
             }
 
-            return car;
+            return CarToDTO(car);
         }
 
         // PUT: api/car/put/5      
         [HttpPut("put/{id}")]
-        public async Task<IActionResult> PutCar(int id, Car car)
+        public async Task<IActionResult> PutCar(int id, CarDTO carDTO)
         {
-            if (id != car.Id)
+            if (id != carDTO.Id)
             {
                 return BadRequest();
             }
+
+            var car = await _context.Cars.FindAsync(id);
+            if (car == null)
+            {
+                return NotFound();
+            }
+
+            car.Model = carDTO.Model;
+            car.Brand = carDTO.Brand;
+            car.ModelYear = carDTO.ModelYear;
+            car.Mileage = carDTO.Mileage;
+            car.Description = carDTO.Description;
+            car.ImageUrl = carDTO.ImageUrl;
+            car.Transmission = carDTO.Transmission;
+            car.Fuel = carDTO.Fuel;
+            car.Listed = carDTO.Listed;
+            car.Price = carDTO.Price;
 
             _context.Entry(car).State = EntityState.Modified;
 
@@ -122,11 +134,8 @@ namespace JSJMExoticCarsWebApp.Controllers
         // DELETE: api/car/delete/5
         [HttpDelete("delete/{id}")]
         public async Task<IActionResult> DeleteCar(int id)
-        {
-            if (_context.Cars == null)
-            {
-                return NotFound();
-            }
+        {  
+            
             var car = await _context.Cars.FindAsync(id);
             if (car == null)
             {
@@ -143,5 +152,20 @@ namespace JSJMExoticCarsWebApp.Controllers
         {
             return (_context.Cars?.Any(e => e.Id == id)).GetValueOrDefault();
         }
+
+        private static CarDTO CarToDTO(Car car) => new CarDTO
+        {
+            Id = car.Id,
+            Model = car.Model,
+            Brand = car.Brand,
+            ModelYear = car.ModelYear,
+            Mileage = car.Mileage,
+            Description = car.Description,
+            ImageUrl = car.ImageUrl,
+            Transmission = car.Transmission,
+            Fuel = car.Fuel,
+            Listed = car.Listed,
+            Price = car.Price
+        };
     }
 }

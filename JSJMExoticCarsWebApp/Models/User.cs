@@ -23,5 +23,8 @@ namespace JSJMExoticCarsWebApp.Models
 
         [Column("car_owner_id")]
         public List<Car> Cars { get; set; } = new List<Car>();
+
+        [NotMapped]
+        public string? AdminNotes { get; set; }
     }
 }

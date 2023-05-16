@@ -50,4 +50,7 @@ public class Car
     [Required]
     [Column("car_price")]
     public int Price { get; set; }
+
+    [NotMapped]
+    public string? AdminInfo { get; set; }
 }
