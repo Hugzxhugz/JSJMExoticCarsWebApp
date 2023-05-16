@@ -40,16 +40,19 @@ button {
     button:hover {
         background-color: #DDBB71;
         color: #1e697e;
+        border-color: #1e697e;
         border: none;
     }
 
 .CarDetails {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
     border: 1px solid #DDBB71;
-    width: 100%;
-    margin-bottom: 20px;
+    border-radius: 5px;
+    width: 300px;
+    margin: 0 auto;
 }
 
 .selectEnums {
@@ -57,8 +60,8 @@ button {
     font-size: 16px;
     border-radius: 5px;
     border: 1px solid #DDBB71;
-    width: 100%;
-    margin-bottom: 20px;
+    width: 300px;
+    margin: 0 auto;
 }
 
 #Description {
@@ -238,28 +241,6 @@ video {
     box-shadow: 0 0 10px #DDBB71;
 }
 
-button {
-    background-color: #1e697e;
-    color: #DDBB71;
-    border-color: #DDBB71;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 16px;
-    padding-left: 16px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: background-color 1s, color 1s;
-}
-
-    button:hover {
-        background-color: #1e697e;
-        color: #1e697e;
-        border: none;
-    }
-
 .car-info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -423,5 +404,32 @@ textarea {
     border-radius: 5px;
     box-shadow: 0px 2px 5px #DDBB71;
     text-align: center;
+}
+
+.AddFunds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #DDBB71;
+    border-radius: 5px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.AddFundsInput {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.AddFunds label {
+    margin-bottom: 5px;
+}
+
+.AddFunds input {
+    padding: 10px;
+    border: 1px solid #DDBB71;
+    border-radius: 5px;
 }
 

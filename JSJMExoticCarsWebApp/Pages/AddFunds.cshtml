@@ -4,9 +4,14 @@
 	ViewData["Tittle"] = "Add Funds";
 }
 
-<form class="SignInBox" method="post">
-	<h1>Add Funds</h1>
-	<label asp-for="@Model.NewFunds">Amount to add</label>
-	<input class="SignInInput" asp-for="@Model.NewFunds" type="number" />
-	<button type="submit">Add</button>
+<link rel="stylesheet" href="css/newstyle.css" asp-append-version="true" />
+
+<form class="AddFunds" method="post">
+    <h1>Add Funds</h1>
+    <div class="AddFundsBox">
+        <label asp-for="@Model.NewFunds">Amount to add:</label>
+        <input class="AddFundsInput" asp-for="@Model.NewFunds" type="number" />
+    </div><br />
+    <button type="submit">Add</button>
 </form>
+
