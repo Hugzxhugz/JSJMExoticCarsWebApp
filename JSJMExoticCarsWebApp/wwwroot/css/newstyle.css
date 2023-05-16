@@ -411,5 +411,19 @@ textarea {
     position: relative;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.box {
+    background-color: #1e697e;
+    padding: 10px;
+    border: 1px solid #DDBB71;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px #DDBB71;
+    text-align: center;
+}
 
 

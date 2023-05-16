@@ -3,33 +3,30 @@
 @{
     ViewData["Title"] = "Market Place";
 }
-<form method="post">
 
-    <div style="text-align: center">
-     <h1>Market</h1>
-    @foreach (Models.Car car in Model.Cars)
-    {
-        if(car.Listed == true)
+<link rel="stylesheet" href="css/newstyle.css" asp-append-version="true" />
+
+<div style="text-align: center">
+    <form method="post">
+        <h1>Market</h1>
+        <div class="grid-container">
+            @foreach (Models.Car car in Model.Cars)
+            {
+                if (car.Listed == true)
+                {
+                    <div class="box" onclick="location.href='@Url.Page("/BuyCar", new { id = car.Id })'">
+                        <p>Brand: @car.Brand</p>
+                        <p>Model: @car.Model</p>
+                        <p>Price: @car.Price kr</p>
+                    </div>
+                }
+            }
+        </div><br>
+        <button asp-page-handler="AddCarPage" class="btn btn-primary">Add Car</button>
+        @if (Model.ErrorMessage != null)
         {
-            <div class="box" onclick="location.href='@Url.Page("/BuyCar", new { id = car.Id })'">
-                <p>Brand: @car.Brand, Model: @car.Model, Model year: @car.ModelYear</p>
-                <p>Milage: @car.Mileage km</p>
-                <p>Transmission: @car.Transmission, Fuel: @car.Fuel</p>
-                <p>Price: @car.Price kr</p>
-            </div><br>
+            <p>@Model.ErrorMessage</p>
         }
-    }
-
-
-    <button asp-page-handler="AddCarPage" class="btn btn-primary">Add Car</button>
-    @if (Model.ErrorMessage != null)
-    {
-        <p>@Model.ErrorMessage</p>
-    }
+    </form>
+    
 </div>
-</form>
-
-
-
-
-
