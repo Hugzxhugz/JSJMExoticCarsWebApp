@@ -18,18 +18,20 @@
     <a href="/AddFunds">
         <button>Add Funds</button>
     </a>
-</div>
-
-
-   
-    <h1>Your cars</h1>
+</div> 
+ <h1 style="text-align:center;">Your cars</h1>
+ <div>
     @foreach (Models.Car car in Model.Session.Cars)
     {
         <div class="carobject" onclick="location.href='@Url.Page("/ShowCar", new { id = car.Id })'">
-            <p>Brand: @car.Brand, Model: @car.Model, Model year: @car.ModelYear</p>
+            <p>Brand: @car.Brand</p>
+            <p>Model: @car.Model</p>
+            <p>Model year: @car.ModelYear</p>
             <p>Milage: @car.Mileage km</p>
-            <p>Transmission: @car.Transmission, Fuel: @car.Fuel</p>
-            <p>Price: @car.Price kr, Listed: @car.Listed</p>
+            <p>Description: @car.Description</p>
+            <p>Transmission: @car.Transmission</p>
+            <p>Fuel: @car.Fuel</p>
+            <p>Price: @car.Price kr</p>
         </div>
         <br>
     }
