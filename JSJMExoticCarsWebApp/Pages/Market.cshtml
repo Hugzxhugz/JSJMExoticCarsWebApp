@@ -3,18 +3,15 @@
 @{
     ViewData["Title"] = "Market Place";
 }
+<form method="post">
 
-
-<form method="post" style="text-align: center";>
-    <h1>@ViewData["Title"]</h1>
-    <p>Use this page to display cars.</p><br>
-
-
+    <div style="text-align: center">
+     <h1>Market</h1>
     @foreach (Models.Car car in Model.Cars)
     {
         if(car.Listed == true)
         {
-            <div class="carobject" onclick="location.href='@Url.Page("/BuyCar", new { id = car.Id })'">
+            <div class="box" onclick="location.href='@Url.Page("/BuyCar", new { id = car.Id })'">
                 <p>Brand: @car.Brand, Model: @car.Model, Model year: @car.ModelYear</p>
                 <p>Milage: @car.Mileage km</p>
                 <p>Transmission: @car.Transmission, Fuel: @car.Fuel</p>
@@ -29,7 +26,10 @@
     {
         <p>@Model.ErrorMessage</p>
     }
+</div>
 </form>
+
+
 
 
 

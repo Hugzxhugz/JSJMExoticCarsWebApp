@@ -6,14 +6,10 @@
 
 <form class="SignInBox" method="post">
 	<h1>Register</h1>
-	<div class="SignInBox">
-		<label asp-for="@Model.User.Name"></label>
-		<input class="SignInInput" asp-for="@Model.User.Name" type="text" />
-	</div>
-	<div class="SignInBox">
-		<label asp-for="@Model.User.Password"></label>
-		<input class="SignInInput" asp-for="@Model.User.Password" type="password" />
-	</div>
+	<label asp-for="@Model.User.Name"></label>
+	<input class="SignInInput" asp-for="@Model.User.Name" type="text" />
+	<label asp-for="@Model.User.Password"></label>
+	<input class="SignInInput" asp-for="@Model.User.Password" type="password" />
 	<button type="submit">Register Account</button>
 </form>
 	
